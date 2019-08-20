@@ -1,0 +1,21 @@
+.footer-wrapper {
+  position: relative; }
+  .footer-wrapper .container {
+    margin-top: 75px; }
+    .footer-wrapper .container .row .col-2:first-child {
+      margin-left: auto; }
+  .footer-wrapper legend {
+    margin-top: 20px;
+    color: #a4aeb3;
+    font-size: 13px;
+    line-height: 18px; }
+
+@media (max-width: 768px) {
+  .feedback-banner h2 {
+    display: none !important; }
+
+  .corner-ribbon-bounds {
+    display: none; }
+
+  .footer-wrapper {
+    display: none; } }
