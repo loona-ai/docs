@@ -1,0 +1,88 @@
+<%
+  @links = {
+    Компания: [
+      {
+        name: 'О нас',
+        url: 'https://loona.ai/about-us'
+      },
+      {
+        name: 'Контакы',
+        url: 'https://loona.ai/team'
+      },
+      {
+        name: 'Возможности',
+        url: 'https://loona.ai/jobs'
+      },
+      {
+        name: 'Блог',
+        url: 'https://loona.ai/press-kit'
+      },
+    ],
+    Помощь_и_Обучение: [
+      {
+        name: 'ЧАВО',
+        url: 'https://loona.ai/contact-us'
+      },
+      {
+        name: 'Обычение',
+        url:'https://loona.ai'
+      },
+      {
+        name: 'Тех поддержка',
+        url: 'https://loona.ai/contact-us'
+      }
+    ],
+    Сотрудничество: [
+      {
+        name: 'Партнерство',
+        url: 'https://loona.ai/partners'
+      },
+      {
+        name: 'ИТ компаниям и разработчикам',
+        url: 'https://loona.ai/'
+      },
+      {
+        name: 'Маркетинговым агенствам',
+        url: 'https://loona.ai/'
+      },
+      {
+        name: 'Частным маркетологам',
+        url: 'https://loona.ai/'
+      }
+    ]
+  }
+%>
+<div class="feedback-banner">
+    <h2>
+      Got Feedback? We want to hear from you!
+    </h2>
+    <a target="_blank" href="#" class="btn btn-big btn-primary" >
+      Give Feedback
+    </a>
+</div>
+<div class="base__footer">
+  <div class="footer-wrapper">
+    <div class="container">
+      <div class="row">
+        <% @links.each_pair do |key, value| %>
+          <div class="col-3">
+          <h4><%= key.to_s.titleize %></h4>
+            <ul class="link-list">
+              <% value.each do |link| %>
+                <li><a href="<%= link[:url] %>" target="_blank"><%= link[:name] %></a></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="col-3">
+          <a target="_blank" href="https://tradegecko.typeform.com/to/A2ewy0" class="btn btn-big btn-primary" >
+            Subscribe to our newsletter
+          </a>
+          <legend>
+            You'll get useful news from our blog, as well as periodic product update emails. Unsubscribe any time.
+          </legend>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
