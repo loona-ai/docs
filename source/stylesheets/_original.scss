@@ -67,6 +67,7 @@ html, body {
   background-color: $nav-bg;
   padding: $nav-padding;
   box-sizing: border-box;
+  border-right: 2px solid #e0dfdf;
 
   @extend %nav-font;
 
@@ -264,7 +265,6 @@ html, body {
   background-color: $main-bg;
   min-height: 100%;
 
-  padding-bottom: 1px; // prevent margin overflow
 
   // The dark box is what gives the code samples their dark background.
   // It sits essentially under the actual content block, which has a
