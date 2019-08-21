@@ -2,7 +2,7 @@
   position: relative; }
   .footer-wrapper .container {
     margin-top: 75px; }
-    .footer-wrapper .container .row .col-2:first-child {
+    .footer-wrapper .container .row .col-3:first-child {
       margin-left: auto; }
   .footer-wrapper legend {
     margin-top: 20px;
