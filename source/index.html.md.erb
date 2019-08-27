@@ -37,26 +37,6 @@ home: true
   </div>
 
   <div class="row index-page__section">
-    <h1> Start building with Loona API in minutes...</h1>
-  </div>
-
-  <div class="row">
-    <div class="card-list">
-      <% current_page.data.secondary_cards.each do |study| %>
-        <div class="study-card">
-          <div class="study-blurb">
-            <h2><%=study.name%></h2>
-            <p><%=study.blurb%></p>
-            <a href="<%= study.url %>" class="plain-link card__sticky-button" >
-              <%= study.cta %> <i class="fa fa-angle-right"></i>
-            </a>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="row index-page__section">
     <div class="col-md-1">
     </div>
     <div class="col-md-3 become-partner__image">
