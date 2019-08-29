@@ -2,7 +2,7 @@
 layout: integration
 title: User Guide
 
-search: true
+search: false
 home: false
 ---
 
