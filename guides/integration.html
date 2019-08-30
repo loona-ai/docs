@@ -186,12 +186,85 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <a class="faux-toc-link" href="/">Вернуться в раздел Loona Docs </a>
+          <li>
+            <a href="#iiko" class="toc-h1 toc-link" data-title="iiko">iiko</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#b022bdab41" class="toc-h2 toc-link" data-title="Установка плагина">Установка плагина</a>
+                  </li>
+              </ul>
+          </li>
       </div>
 
     </div>
     <div class="page-wrapper code-page">
       <div class="content">
-        
+        <h1 id='iiko'>iiko</h1><h2 id='b022bdab41'>Установка плагина</h2>
+<ul>
+<li><p>Копируем папку LoonaPluginSettings в C:\Users\YourUserName\ProgramData\Roaming </p></li>
+<li><p>Копируем папки LoonaPlugin и iikoWaiter5 в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)</p></li>
+<li><p>Запускаем iiko Front (помним что для данного метода нужна лицензии типа iikoTableService, iikoWaiter, iikoFrontPaymentPlugin)</p></li>
+<li><p>В iiko Front переходим в раздел “Дополнения” и выбираем “Loona settings”.</p>
+
+<p>login - Admin </p>
+
+<p>password - Loona Admin</p></li>
+</ul>
+
+<p><img src="../images/iiko1.PNG" width="910" height="456" alt="Card Flip">
+- Задаем настройки</p>
+
+<p>Api access token - по запросу
+        Api base url - https://apidev.loona.ai
+        Waiter request url - http://localhost
+        Waiter port - 1234
+<img src="../images/iiko2.png" width="512" height="288" alt="Card Flip"></p>
+
+<ul>
+<li>Открываем iiko Office
+
+<ul>
+<li>Переходим в раздел Дисконтная Система -&gt; Скидки и Надбавки</li>
+<li>Добавляем скидку</li>
+<li>Обязательно пишем название - LoonaFixedSumDiscount</li>
+<li>Тип скидки ставим Скидки и Надбавки</li>
+<li>Нажимаем Далее</li>
+</ul></li>
+</ul>
+
+<p><img src="../images/iiko3.PNG" width="910" height="488" alt="Card Flip"></p>
+
+<ul>
+<li>Убираем галочку Можно назначить вручную, остальное по усмотрению ресторана</li>
+</ul>
+
+<p><img src="../images/iiko4.png" width="821" height="610" alt="Card Flip"></p>
+
+<ul>
+<li>Тип ставим “Фиксированная сумма” и обязательно устанавливаем галочку “Назначать сумму”</li>
+</ul>
+
+<p><img src="../images/iiko5.PNG" width="910" height="490" alt="Card Flip"></p>
+
+<ul>
+<li><p>Нажимаем Далее и заканчиваем установку скидки.</p></li>
+<li><p>Добавляем внешний вид оплаты. Переходим в раздел “Розничные продажи”  нажимаем на “Тип платы” и добавляем новую оплату. </p></li>
+<li><p>Обязательно указываем: </p>
+
+<p>наименование - Loona Payment
+    Тип - Внешний тип оплаты
+    Название в чеке - пишите что хотите
+    Безналичный тип - Loona Payment </p></li>
+<li><p>Сохраняем</p></li>
+</ul>
+
+<p><img src="../images/iiko6.png" width="512" height="266" alt="Card Flip"></p>
+
+<ul>
+<li><p>Устанавливаем мобильное приложение iikoWaiter5</p></li>
+<li><p>Перезагружаем iiko front</p></li>
+</ul>
+
       </div>
     </div>
   </body>
