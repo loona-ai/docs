@@ -10,7 +10,7 @@ search: true
 home: false
 ---
 
-Для получения информации напишите нам на api.loona.ai
+Для получения информации напишите нам на [api@loona.ai](api@loona.ai)
 
 <!--
 # Introduction
