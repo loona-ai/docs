@@ -67,22 +67,22 @@ body {
 
   h1 {
     @extend %header-font;
-    font-size: 2.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-top: 1em;
+    font-size: 1.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin-top: 0.5em;
     margin-bottom: $h1-margin-bottom;
-    border: 2px solid $print-color-light;
-    border-width: 2px 0;
+    border: 1px solid $print-color-light;
+    border-width: 1px 0;
     text-align: center;
   }
 
   h2 {
     @extend %header-font;
-    font-size: 1.8em;
-    margin-top: 2em;
-    border-top: 2px solid $print-color-light;
-    padding-top: 0.8em;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border-top: 1px solid $print-color-light;
+    padding-top: 0.4em;
   }
 
   h1+h2, h1+div+h2 {
