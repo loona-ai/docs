@@ -10,6 +10,9 @@ search: true
 home: false
 ---
 
+Для получения информации напишите нам на api.loona.ai
+
+<!--
 # Introduction
 
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
@@ -230,3 +233,4 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+-->
