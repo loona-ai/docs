@@ -2,24 +2,18 @@
 h1 {
   @extend %header-font;
   font-size: 30px;
-  margin-top: 0.5em;
-  font-weight: bold;
 }
 
 
 h2 {
   @extend %header-font;
-  font-size: 26px;
-  margin-top: 0.5em;
-  font-weight: bold;
+  font-size: 26px
 }
 
 
 h3, h4, h5, h6 {
   @extend %header-font;
   font-size: 22px;
-  margin-top: 0.5em;
-  font-weight: bold;
 }
 
 h4, h5, h6 {
