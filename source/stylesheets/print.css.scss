@@ -70,7 +70,7 @@ body {
     font-size: 2.5em;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     margin-bottom: $h1-margin-bottom;
     border: 1px solid $print-color-light;
     border-width: 1px 0;
@@ -80,7 +80,7 @@ body {
   h2 {
     @extend %header-font;
     font-size: 1.8em;
-    margin-top: 1em;
+    margin-top: 0.3em;
     border-top: 1px solid $print-color-light;
     padding-top: 0.4em;
   }
