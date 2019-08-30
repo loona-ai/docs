@@ -10,7 +10,7 @@ search: true
 home: false
 ---
 
-Для получения информации напишите нам на <a href=mailto:api@loona.ai?subject="API integration"> API@loona.ai email </a>
+Для получения информации напишите нам на <a href=mailto:api@loona.ai?subject="API integration"> api@loona.ai email </a>
 
 <!--
 # Introduction
