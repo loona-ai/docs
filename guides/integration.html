@@ -192,6 +192,17 @@
                   <li>
                     <a href="#b022bdab41" class="toc-h2 toc-link" data-title="Установка плагина">Установка плагина</a>
                   </li>
+                  <li>
+                    <a href="#4f6db5306b" class="toc-h2 toc-link" data-title="Настройки в кабинете">Настройки в кабинете</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#r_keeper" class="toc-h1 toc-link" data-title="r_keeper">r_keeper</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#b022bdab41-2" class="toc-h2 toc-link" data-title="Установка плагина">Установка плагина</a>
+                  </li>
               </ul>
           </li>
       </div>
@@ -204,21 +215,25 @@
 <li><p>Копируем папку LoonaPluginSettings в C:\Users\YourUserName\ProgramData\Roaming </p></li>
 <li><p>Копируем папки LoonaPlugin и iikoWaiter5 в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)</p></li>
 <li><p>Запускаем iiko Front (помним что для данного метода нужна лицензии типа iikoTableService, iikoWaiter, iikoFrontPaymentPlugin)</p></li>
-<li><p>В iiko Front переходим в раздел “Дополнения” и выбираем “Loona settings”.</p>
-
-<p>login - Admin </p>
-
-<p>password - Loona Admin</p></li>
+<li><p>В iiko Front переходим в раздел “Дополнения” и выбираем “Loona settings”.</p></li>
 </ul>
 
-<p><img src="../images/iiko1.PNG" width="910" height="456" alt="Card Flip">
+<blockquote>
+<p>Login - Admin<br>
+   Password - Loona Admin</p>
+</blockquote>
+
+<p><img src="../images/iiko1.PNG" width="910" height="456">
 - Задаем настройки</p>
 
-<p>Api access token - по запросу
-        Api base url - https://apidev.loona.ai
-        Waiter request url - http://localhost
-        Waiter port - 1234
-<img src="../images/iiko2.png" width="512" height="288" alt="Card Flip"></p>
+<blockquote>
+<p>Api access token - по запросу<br>
+    Api base url - https://apidev.loona.ai<br>
+    Waiter request url - http://localhost<br>
+    Waiter port - 1234</p>
+
+<p><img src="../images/iiko2.png" width="512" height="288" alt="Card Flip"></p>
+</blockquote>
 
 <ul>
 <li>Открываем iiko Office
@@ -251,10 +266,12 @@
 <li><p>Добавляем внешний вид оплаты. Переходим в раздел “Розничные продажи”  нажимаем на “Тип платы” и добавляем новую оплату. </p></li>
 <li><p>Обязательно указываем: </p>
 
-<p>наименование - Loona Payment
-    Тип - Внешний тип оплаты
-    Название в чеке - пишите что хотите
-    Безналичный тип - Loona Payment </p></li>
+<blockquote>
+<p>Наименование - Loona Payment<br>
+    Тип - Внешний тип оплаты<br>
+    Название в чеке - пишите что хотите<br>
+    Безналичный тип - Loona Payment</p>
+</blockquote></li>
 <li><p>Сохраняем</p></li>
 </ul>
 
@@ -264,6 +281,140 @@
 <li><p>Устанавливаем мобильное приложение iikoWaiter5</p></li>
 <li><p>Перезагружаем iiko front</p></li>
 </ul>
+<h2 id='4f6db5306b'>Настройки в кабинете</h2><h1 id='r_keeper'>r_keeper</h1><h2 id='b022bdab41-2'>Установка плагина</h2>
+<p>*В течении использования плагина, нужно выключить Windows Firewall или открыть доступ для порта плагина (port 1234)</p>
+
+<ul>
+<li><p>Скачайте папку Loona R-keeper</p></li>
+<li><p>Откройте папку Loona R-keeper</p></li>
+</ul>
+
+<p><img src="../images/rk1.png" width="747" height="190"></p>
+
+<ul>
+<li>  Скопируйте «Extdll.dll» и «Extdll.ini» в папку UCS/FARCARDS</li>
+</ul>
+
+<p><img src="../images/rk2.png" width="738" height="669"></p>
+
+<ul>
+<li><p>Откройте файл «FARCARDS.INI» в текстовом редакторе</p></li>
+<li><p>В поле DLL впишите «ExtDll.dll» и сохраните изменения</p></li>
+</ul>
+
+<p><img src="../images/rk3.png" width="757" height="420"></p>
+
+<ul>
+<li><p>Запустите  «Farcards.exe – install»</p></li>
+<li><p>Откройте папку где содержится R-keeper и запустите R-keeper «Manager»</p></li>
+</ul>
+
+<p><img src="../images/rk4.png" width="746" height="189"></p>
+
+<ul>
+<li><p>Откройте систему r_keeper и зайдите в неё</p></li>
+<li><p>Пройдите в меню в раздел «Деньги» и откройте «Скидки и Наценки»</p></li>
+</ul>
+
+<p><img src="../images/rk5.png" width="1167" height="581"></p>
+
+<ul>
+<li>  Откроется окно управления скидок и наценок, наведите мышь на поле «All» и с помощью правой кнопки мышки создайте новый тип скидок</li>
+</ul>
+
+<p><img src="../images/rk6.png" width="1218" height="424"></p>
+
+<ul>
+<li>  Откроются «Свойства», в них введите Название своей скидки и поменяйте статус на Активный</li>
+</ul>
+
+<p><img src="../images/rk7.png" width="696" height="260"></p>
+
+<ul>
+<li>  Пройдите в окно «Скидки/Нацинки» вашей новой скидки и создайте новую скидку (Нажмите правой кнопки мышки на свободое поле, из возникших опций выберите «Новая скидка»)</li>
+</ul>
+
+<p><img src="../images/rk8.png" width="1225" height="379"></p>
+
+<ul>
+<li>  Введите название вашей скидки, пока что не меняйте статус на активный</li>
+</ul>
+
+<p><img src="../images/rk9.png" width="1219" height="702"></p>
+
+<ul>
+<li>  Откройте детализацию вашей скидки двойным кликом на иконку</li>
+</ul>
+
+<p><img src="../images/rk10.png" width="414" height="150"></p>
+
+<ul>
+<li>  Создайте новую детализацию (Нажмите правой кнопки мышки на свободое поле, из возникших опций выберите «Новая детализация»)</li>
+</ul>
+
+<p><img src="../images/rk11.png" width="345" height="347"></p>
+
+<ul>
+<li>  Откройте поле настроек детализации, и поменяйте процент скидки на 100.00</li>
+</ul>
+
+<p><img src="../images/rk12.png" width="1213" height="400"></p>
+
+<ul>
+<li>  Сохраните изменения </li>
+</ul>
+
+<p><img src="../images/rk13.png" width="1494" height="700"></p>
+
+<ul>
+<li>  Пройдите обранто в «Свойства» вашей скидки и поменяйте статус на активный «Active»</li>
+</ul>
+
+<p><img src="../images/rk14.png" width="1214" height="627"></p>
+
+<ul>
+<li><p>Сохраните изменения, но еще не закрывайте окно «Скидки и Надбавки»</p></li>
+<li><p>Откройте папку Loona R-keeper</p></li>
+<li><p>Скопируйте папку Loona в папку где хратится r_keeper и FARCARDS</p></li>
+</ul>
+
+<p><img src="../images/rk15.png" width="750" height="425"></p>
+
+<ul>
+<li>  Откройте скопированую папку Loona, и запустите из нее файл «ServiceInstaller.exe» как администратор</li>
+</ul>
+
+<p><img src="../images/rk16.png" width="741" height="412"></p>
+
+<ul>
+<li>  Сервис будет установлен, после установки зайдите в Windows  Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)</li>
+</ul>
+
+<p><img src="../images/rk17.png" width="1265" height="872"></p>
+
+<ul>
+<li><p>Не закрывайте окно сервисов</p></li>
+<li><p>Затем откройте ваш браузер</p></li>
+<li><p>Введите адрес плагина в браузере, адрес: «localhost:1234/settings»</p></li>
+<li><p>Откроется поле настроек плагина. Введите необходимые параметры для настройки скидки и сохраните параметры. Код вашей скидки вам доступен в свойствах скидки в r_keeper manager.</p></li>
+</ul>
+
+<p><img src="../images/rk18.png" width="1008" height="637"></p>
+
+<blockquote>
+<p>Для получения Идентификационного номера сканера и URL кабинета обратитесь к документации кабинета Loona  </p>
+
+<p>При изменениях порта на «XXXX», адрес плагина меняется на localhost:XXXX/settings (но нет необходимости менять порт)  </p>
+</blockquote>
+
+<p><img src="../images/rk19.png" width="1219" height="714"></p>
+
+<ul>
+<li><p>Сохраните изменения параметров плагина</p></li>
+<li><p>Вернитесь в «Сервисы», выделите сервис Loona r-keeper plugin, обновите сервис (сервис должен выключится после обновления), затем запустите сервис</p></li>
+</ul>
+
+<p><img src="../images/rk20.png" width="1259" height="868"></p>
 
       </div>
     </div>
