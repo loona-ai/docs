@@ -36,10 +36,13 @@
   h1 {
     @extend %header-font;
     font-size: 25px;
-    padding-top: 1.0em;
-    padding-bottom: 0.5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.4em;
+    margin-top: 2em;
+  }
+
+  h1 {
     margin-bottom: $h1-margin-bottom;
-    margin-top: 5em;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -51,8 +54,8 @@
     @extend %header-font;
     font-size: 24px;
     margin-bottom: 0;
-    padding-top: 2em;
-    padding-bottom: 0.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.3em;
   }
 
   // h2s right after h1s should bump right up
