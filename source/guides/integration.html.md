@@ -118,11 +118,11 @@ home: false
 
 -	Скачайте и откройте папку плагина Loona
 
- <img src="../images/rk1.png" width="747" height="190">
+ <img src="../images/rk1.png" width="620" height="160">
 
 -	Скопируйте «Extdll.dll» и «Extdll.ini» в папку UCS/FARCARDS
  
- <img src="../images/rk2.png" width="738" height="669">
+ <img src="../images/rk2.png" width="568" height="515">
 
 -	Откройте файл «FARCARDS.INI» в текстовом редакторе
 
@@ -140,23 +140,23 @@ home: false
 
 -	Пройдите в меню в раздел «Деньги» и откройте «Скидки и Наценки»
  
- <img src="../images/rk5.png" width="1167" height="581">
+ <img src="../images/rk5.png" width="900" height="450">
 
 -	Откроется окно управления скидок и наценок, наведите мышь на поле «All» и с помощью правой кнопки мышки создайте новый тип скидок
  
- <img src="../images/rk6.png" width="1218" height="424">
+ <img src="../images/rk6.png" width="1000" height="350">
 
 -	Откроются «Свойства», в них введите Название своей скидки и поменяйте статус на Активный
  
- <img src="../images/rk7.png" width="696" height="260">
+ <img src="../images/rk7.png" width="500" height="190">
 
 -	Пройдите в окно «Скидки/Нацинки» вашей новой скидки и создайте новую скидку (Нажмите правой кнопки мышки на свободое поле, из возникших опций выберите «Новая скидка»)
  
- <img src="../images/rk8.png" width="1225" height="379">
+ <img src="../images/rk8.png" width="1000" height="320">
 
 -	Введите название вашей скидки, пока что не меняйте статус на активный
  
- <img src="../images/rk9.png" width="1219" height="702">
+ <img src="../images/rk9.png" width="1000" height="590">
 
 -	Откройте детализацию вашей скидки двойным кликом на иконку
  
@@ -168,15 +168,15 @@ home: false
 
 -	Откройте поле настроек детализации, и поменяйте процент скидки на 100.00
  
- <img src="../images/rk12.png" width="1213" height="400">
+ <img src="../images/rk12.png" width="1000" height="333">
 
 -	Сохраните изменения 
 
-<img src="../images/rk13.png" width="1494" height="700">
+<img src="../images/rk13.png" width="1000" height="467">
 
 -	Пройдите обранто в «Свойства» вашей скидки и поменяйте статус на активный «Active»
 
- <img src="../images/rk14.png" width="1214" height="627">
+ <img src="../images/rk14.png" width="1000" height="522">
 
 -	Сохраните изменения, но еще не закрывайте окно «Скидки и Надбавки»
 
@@ -192,7 +192,7 @@ home: false
 
 -	Сервис будет установлен, после установки зайдите в Windows  Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)
 
- <img src="../images/rk17.png" width="1265" height="872">
+ <img src="../images/rk17.png" width="1000" height="690">
 
 -	Не закрывайте окно сервисов
 
@@ -206,15 +206,15 @@ home: false
 
      - При изменениях порта на «XXXX», адрес плагина меняется на localhost:XXXX/settings (но нет необходимости менять порт) 
      
-<img src="../images/rk18.png" width="1056" height="631"> 
+<img src="../images/rk18.png" width="1000" height="600"> 
 
-<img src="../images/rk19.png" width="1219" height="714">
+<img src="../images/rk19.png" width="1000" height="588">
 
 -	Сохраните изменения параметров плагина
 
 -	Вернитесь в «Сервисы», выделите сервис Loona r-keeper plugin, обновите сервис (сервис должен выключится после обновления), затем запустите сервис
 
- <img src="../images/rk20.png" width="1259" height="868">
+ <img src="../images/rk20.png" width="1000" height="689">
 
 ## Настройки в кабинете
 
