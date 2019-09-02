@@ -17,7 +17,7 @@ home: false
 
 - Введите Логин и Пароль
 
-<img src="../images/iiko1.PNG" width="910" height="456">
+<img src="../images/iiko1.PNG" width="900">
 
 - Задаем настройки:
         
@@ -34,15 +34,15 @@ home: false
     - Тип скидки ставим Скидки и Надбавки
     - Нажимаем Далее
     
-<img src="../images/iiko3.PNG" width="910" height="488" alt="Card Flip">
+<img src="../images/iiko3.PNG" width="900">
 
 - Убираем галочку Можно назначить вручную, остальное по усмотрению ресторана
 
-<img src="../images/iiko4.png" width="821" height="610" alt="Card Flip">
+<img src="../images/iiko4.png" width="800">
 
 - Тип ставим “Фиксированная сумма” и обязательно устанавливаем галочку “Назначать сумму”
 
-<img src="../images/iiko5.png" width="910" height="490" alt="Card Flip">
+<img src="../images/iiko5.png" width="900">
 
 - Нажимаем Далее и заканчиваем установку скидки.
 
@@ -56,7 +56,7 @@ home: false
     - Безналичный тип - Loona Payment
 - Сохраняем
 
-<img src="../images/iiko6.png" width="665" height="345" alt="Card Flip">
+<img src="../images/iiko6.png" width="665">
 
 - Устанавливаем мобильное приложение iikoWaiter5
 
@@ -72,7 +72,7 @@ home: false
 
 - Зайдите в <img src="../images/иконка%20редактирования.png" width="12" height="12" alt="редактирование"> **редактирование** того макета на который хотите настроить сканер
 
-<img src="../images/Number%20scanner.png" width="624" height="588" alt="Card Design">
+<img src="../images/Number%20scanner.png" width="624">
 
 - Перейдите в секцию **Дизайн**
 
@@ -96,7 +96,7 @@ home: false
 
 Для создания нового сканера:
 
-<img src="../images/maket_create.png" width="600" height="270" alt="Maket Create">
+<img src="../images/maket_create.png" width="600">
 
 - В разделе Сканер нажмите на Создать сканер.
 
@@ -118,45 +118,45 @@ home: false
 
 -	Скачайте и откройте папку плагина Loona
 
- <img src="../images/rk1.png" width="620" height="160">
+ <img src="../images/rk1.png" width="600" >
 
 -	Скопируйте «Extdll.dll» и «Extdll.ini» в папку UCS/FARCARDS
  
- <img src="../images/rk2.png" width="568" height="515">
+ <img src="../images/rk2.png" width="550" >
 
 -	Откройте файл «FARCARDS.INI» в текстовом редакторе
 
 -	В поле DLL впишите «ExtDll.dll» и сохраните изменения
  
- <img src="../images/rk3.png" width="757" height="420">
+ <img src="../images/rk3.png" width="700">
 
 -	Запустите  «Farcards.exe – install»
 
 -	Откройте папку где содержится R-keeper и запустите R-keeper «Manager»
  
- <img src="../images/rk4.png" width="746" height="189">
+ <img src="../images/rk4.png" width="700">
 
 -	Откройте систему r_keeper и зайдите в неё
 
 -	Пройдите в меню в раздел «Деньги» и откройте «Скидки и Наценки»
  
- <img src="../images/rk5.png" width="900" height="450">
+ <img src="../images/rk5.png" width="900">
 
 -	Откроется окно управления скидок и наценок, наведите мышь на поле «All» и с помощью правой кнопки мышки создайте новый тип скидок
  
- <img src="../images/rk6.png" width="1000" height="350">
+ <img src="../images/rk6.png" width="900" height="350">
 
 -	Откроются «Свойства», в них введите Название своей скидки и поменяйте статус на Активный
  
- <img src="../images/rk7.png" width="500" height="190">
+ <img src="../images/rk7.png" width="500">
 
 -	Пройдите в окно «Скидки/Нацинки» вашей новой скидки и создайте новую скидку (Нажмите правой кнопки мышки на свободое поле, из возникших опций выберите «Новая скидка»)
  
- <img src="../images/rk8.png" width="1000" height="320">
+ <img src="../images/rk8.png" width="900">
 
 -	Введите название вашей скидки, пока что не меняйте статус на активный
  
- <img src="../images/rk9.png" width="1000" height="590">
+ <img src="../images/rk9.png" width="900">
 
 -	Откройте детализацию вашей скидки двойным кликом на иконку
  
@@ -168,15 +168,15 @@ home: false
 
 -	Откройте поле настроек детализации, и поменяйте процент скидки на 100.00
  
- <img src="../images/rk12.png" width="1000" height="333">
+ <img src="../images/rk12.png" width="900">
 
 -	Сохраните изменения 
 
-<img src="../images/rk13.png" width="1000" height="467">
+<img src="../images/rk13.png" width="900">
 
 -	Пройдите обранто в «Свойства» вашей скидки и поменяйте статус на активный «Active»
 
- <img src="../images/rk14.png" width="1000" height="522">
+ <img src="../images/rk14.png" width="900">
 
 -	Сохраните изменения, но еще не закрывайте окно «Скидки и Надбавки»
 
@@ -184,15 +184,15 @@ home: false
 
 -	Скопируйте папку Loona в папку где хратится r_keeper и FARCARDS
 
- <img src="../images/rk15.png" width="750" height="425">
+ <img src="../images/rk15.png" width="750">
 
 -	Откройте скопированую папку Loona, и запустите из нее файл «ServiceInstaller.exe» как администратор
 
- <img src="../images/rk16.png" width="741" height="412">
+ <img src="../images/rk16.png" width="700">
 
 -	Сервис будет установлен, после установки зайдите в Windows  Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)
 
- <img src="../images/rk17.png" width="1000" height="690">
+ <img src="../images/rk17.png" width="900">
 
 -	Не закрывайте окно сервисов
 
@@ -206,15 +206,15 @@ home: false
 
      - При изменениях порта на «XXXX», адрес плагина меняется на localhost:XXXX/settings (но нет необходимости менять порт) 
      
-<img src="../images/rk18.png" width="1000" height="600"> 
+<img src="../images/rk18.png" width="1000"> 
 
-<img src="../images/rk19.png" width="1000" height="588">
+<img src="../images/rk19.png" width="1000">
 
 -	Сохраните изменения параметров плагина
 
 -	Вернитесь в «Сервисы», выделите сервис Loona r-keeper plugin, обновите сервис (сервис должен выключится после обновления), затем запустите сервис
 
- <img src="../images/rk20.png" width="1000" height="689">
+ <img src="../images/rk20.png" width="1000">
 
 ## Настройки в кабинете
 
@@ -242,7 +242,7 @@ home: false
 
 Для создания нового сканера:
 
-<img src="../images/maket_create.png" width="600" height="270" alt="Maket Create">
+<img src="../images/maket_create.png" width="600" alt="Maket Create">
 
 - В разделе Сканер нажмите на Создать сканер.
 
