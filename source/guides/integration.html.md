@@ -22,9 +22,10 @@ home: false
 - Задаем настройки:
         
    - Api access token - по запросу  
-   - Api base url - https://apidev.loona.ai  
+   - Api base url - https://api.loona.ai  
    - Waiter request url - http://localhost  
    - Waiter port - 1234
+   
    <img src="../images/iiko2.png" width="512" height="288" alt="Card Flip">
 
 - Открываем iiko Office
