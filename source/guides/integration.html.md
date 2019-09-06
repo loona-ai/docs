@@ -224,6 +224,8 @@ home: false
 <img src="../images/rk_extra3.png" width="900"> 
 
 -   В окне скрипта замените имеющийся скрипт на код расположенный ниже:
+
+
 <pre><code>
         function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
         var enc: integer; id, ratio, couponeCode :integer; 
