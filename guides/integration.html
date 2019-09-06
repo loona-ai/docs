@@ -469,47 +469,48 @@
 <p><img src="../images/rk_extra3.png" width="900"> </p>
 
 <ul>
-<li>  В окне скрипта замените имеющийся скрипт на код расположенный ниже:</li>
-</ul>
-
-<p><code>
-function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
-var enc: integer; id, ratio, couponeCode :integer; 
-var encShift, couponCodeShift :integer;
-var couponSeparateSymbol :String;<br>
-var idString:String;
-var cardCodeResult:Int64;
-begin </p>
+<li><p>В окне скрипта замените имеющийся скрипт на код расположенный ниже:
+<pre><code>
+    function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
+    var enc: integer; id, ratio, couponeCode :integer; 
+    var encShift, couponCodeShift :integer;
+    var couponSeparateSymbol :String;<br>
+    var idString:String;
+    var cardCodeResult:Int64;
+    begin </p>
 
 <p>Result:=false;<br>
-  ratio :=1000; 
-  encShift :=48;
-  couponCodeShift:=36;
-  couponSeparateSymbol := &#39;/&#39;;    </p>
+      ratio :=1000; 
+      encShift :=48;
+      couponCodeShift:=36;
+      couponSeparateSymbol := &#39;/&#39;;    </p>
 
 <p>if pos(&#39;-&#39;, Parameter) &gt; 1 then begin
-        Enc := StrToIntDef(copy(Parameter, 1, pos(&#39;-&#39;, Parameter) - 1),-1);
-        if Enc&gt;0 then begin
-          idString := copy(Parameter, pos(&#39;-&#39;, Parameter)+1, length(Parameter));</p>
+            Enc := StrToIntDef(copy(Parameter, 1, pos(&#39;-&#39;, Parameter) - 1),-1);
+            if Enc&gt;0 then begin
+              idString := copy(Parameter, pos(&#39;-&#39;, Parameter)+1, length(Parameter));</p>
 
 <p>if pos(couponSeparateSymbol, idString) &gt; 1 then begin
-            couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
-            idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)<br>
-          end; </p>
+                couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
+                idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)<br>
+              end; </p>
 
 <p>id :=  StrToIntDef(idString,-1)-(enc-(enc/ratio)*ratio);
-          cardCodeResult :=     (enc shl encShift ) and (StrToInt64(&#39;0x7FFF&#39;)shl encShift);
-          cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64(&#39;0xFFF&#39;)shl couponCodeShift) ) ;
-          cardCodeResult :=    cardCodeResult or id;
-          Parameter :=Int64ToStr(cardCodeResult);
-          Result:=true;<br>
-        end;<br>
-  end;<br>
-end; </code></p>
+              cardCodeResult :=     (enc shl encShift ) and (StrToInt64(&#39;0x7FFF&#39;)shl encShift);
+              cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64(&#39;0xFFF&#39;)shl couponCodeShift) ) ;
+              cardCodeResult :=    cardCodeResult or id;
+              Parameter :=Int64ToStr(cardCodeResult);
+              Result:=true;<br>
+            end;<br>
+      end;<br>
+    end;
+</code></pre></p></li>
+</ul>
 
 <p><img src="../images/rk_extra4.PNG" width="900"> </p>
 
 <ul>
+<li><p>Нажмите &quot;Ок&quot; и закройте окно</p></li>
 <li><p>Затем откройте ваш браузер</p></li>
 <li><p>Введите адрес плагина в браузере, адрес: «localhost:1234/settings»</p></li>
 <li><p>Откроется поле настроек плагина. Введите необходимые параметры для настройки скидки и сохраните параметры. Код вашей скидки вам доступен в свойствах скидки в r_keeper manager.</p>
