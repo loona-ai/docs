@@ -321,9 +321,8 @@ html, body {
     margin: 0;
 
     .code-page & {
-      width: $examples-width;
-      float:right;
-      clear:right;
+      width: 100%;
+      clear: right;
     }
 
     box-sizing: border-box;
