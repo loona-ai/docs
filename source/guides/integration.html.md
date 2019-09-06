@@ -227,39 +227,39 @@ home: false
 
 
 <pre><code>
-        function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
-        var enc: integer; id, ratio, couponeCode :integer; 
-        var encShift, couponCodeShift :integer;
-        var couponSeparateSymbol :String;        
-        var idString:String;
-        var cardCodeResult:Int64;
-        begin 
-         
-          Result:=false;           
-          ratio :=1000; 
-          encShift :=48;
-          couponCodeShift:=36;
-          couponSeparateSymbol := '/';    
-        
-          if pos('-', Parameter) > 1 then begin
-                Enc := StrToIntDef(copy(Parameter, 1, pos('-', Parameter) - 1),-1);
-                if Enc>0 then begin
-                  idString := copy(Parameter, pos('-', Parameter)+1, length(Parameter));
-                  
-                   if pos(couponSeparateSymbol, idString) > 1 then begin
-                    couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
-                    idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)       
-                  end; 
-        
-                  id :=  StrToIntDef(idString,-1)-(enc-(enc/ratio)*ratio);
-                  cardCodeResult :=     (enc shl encShift ) and (StrToInt64('0x7FFF')shl encShift);
-                  cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64('0xFFF')shl couponCodeShift) ) ;
-                  cardCodeResult :=    cardCodeResult or id;
-                  Parameter :=Int64ToStr(cardCodeResult);
-                  Result:=true;     
-                end;  
-          end;       
-        end;
+function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
+var enc: integer; id, ratio, couponeCode :integer; 
+var encShift, couponCodeShift :integer;
+var couponSeparateSymbol :String;        
+var idString:String;
+var cardCodeResult:Int64;
+begin 
+ 
+  Result:=false;           
+  ratio :=1000; 
+  encShift :=48;
+  couponCodeShift:=36;
+  couponSeparateSymbol := '/';    
+
+  if pos('-', Parameter) > 1 then begin
+        Enc := StrToIntDef(copy(Parameter, 1, pos('-', Parameter) - 1),-1);
+        if Enc>0 then begin
+          idString := copy(Parameter, pos('-', Parameter)+1, length(Parameter));
+          
+           if pos(couponSeparateSymbol, idString) > 1 then begin
+            couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
+            idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)       
+          end; 
+
+          id :=  StrToIntDef(idString,-1)-(enc-(enc/ratio)*ratio);
+          cardCodeResult :=     (enc shl encShift ) and (StrToInt64('0x7FFF')shl encShift);
+          cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64('0xFFF')shl couponCodeShift) ) ;
+          cardCodeResult :=    cardCodeResult or id;
+          Parameter :=Int64ToStr(cardCodeResult);
+          Result:=true;     
+        end;  
+  end;       
+end;
 </code></pre>
 
 <img src="../images/rk_extra4.PNG" width="900"> 
