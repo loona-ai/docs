@@ -197,6 +197,71 @@ home: false
 
 -	Не закрывайте окно сервисов
 
+-   Далее, откройте ***Сервисы -> Обработка Сигналов Устройств -> MCR алгоритмы***
+
+<img src="../images/rk_extra1.PNG" width="900"> 
+
+-   Откроется страничка существующих алгоритмов. Убедитесь что у вас имеется алгоритм loona.
+
+<img src="../images/rk_extra2.PNG" width="900"> 
+
+-   В случае если у вас нет этого алгоритма, создайте новый.
+
+-   Для создания нового алгоритма можно просто скопировать любой имеющийся алгоритм и вставить его в окно алгоритмов. 
+
+<img src="../images/rk_extra_if1.PNG" width="600"> 
+
+<img src="../images/rk_extra_if2.PNG" width="600"> 
+
+-   После этого, у васбудет иметься 2 одинаковых алгоритма. Переименуйте один из них на **loona**.
+
+-   Нажмите на алгоритм и откроются свойства справа, поменяйте статус на **Active** и затем убедитесь что все настройки совпадают с настройками представленными ниже:
+
+<img src="../images/rk_extra_if3.png" width="900"> 
+
+-   Нажмите на скрипт, и откройте окно скрипта с помощью иконки слева.
+
+<img src="../images/rk_extra3.png" width="900"> 
+
+-   В окне скрипта замените имеющийся скрипт на код расположенный ниже:
+
+<code>
+function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
+var enc: integer; id, ratio, couponeCode :integer; 
+var encShift, couponCodeShift :integer;
+var couponSeparateSymbol :String;        
+var idString:String;
+var cardCodeResult:Int64;
+begin 
+ 
+  Result:=false;           
+  ratio :=1000; 
+  encShift :=48;
+  couponCodeShift:=36;
+  couponSeparateSymbol := '/';    
+
+  if pos('-', Parameter) > 1 then begin
+        Enc := StrToIntDef(copy(Parameter, 1, pos('-', Parameter) - 1),-1);
+        if Enc>0 then begin
+          idString := copy(Parameter, pos('-', Parameter)+1, length(Parameter));
+          
+          if pos(couponSeparateSymbol, idString) > 1 then begin
+            couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
+            idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)       
+          end; 
+
+          id :=  StrToIntDef(idString,-1)-(enc-(enc/ratio)*ratio);
+          cardCodeResult :=     (enc shl encShift ) and (StrToInt64('0x7FFF')shl encShift);
+          cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64('0xFFF')shl couponCodeShift) ) ;
+          cardCodeResult :=    cardCodeResult or id;
+          Parameter :=Int64ToStr(cardCodeResult);
+          Result:=true;     
+        end;  
+  end;       
+end; </code>
+
+<img src="../images/rk_extra4.PNG" width="900"> 
+
 -	Затем откройте ваш браузер
 
 -	Введите адрес плагина в браузере, адрес: «localhost:1234/settings»
