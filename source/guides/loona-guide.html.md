@@ -3,7 +3,7 @@ layout: integration
 title: User Guide
 
 search: false
-home: false
+home: true
 ---
 
 ### Руководство по пользованию приложением Loona
