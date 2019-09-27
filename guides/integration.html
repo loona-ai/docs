@@ -215,39 +215,16 @@
       <div class="content">
         <h1 id='iiko'>iiko</h1><h2 id='b022bdab41'>Установка плагина</h2>
 <ul>
-<li><p>Копируем папку LoonaPluginSettings в C:\Users\YourUserName\ProgramData </p></li>
+<li><p>Копируем папку LoonaPluginSettings в C:\ProgramData </p></li>
 <li><p>Копируем папки LoonaPlugin и iikoWaiter5 в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)</p></li>
 <li><p>Запускаем iiko Front (помним что для данного метода нужна лицензии типа iikoTableService, iikoWaiter, iikoFrontPaymentPlugin)</p></li>
-<li><p>В iiko Front переходим в раздел “Дополнения” и выбираем “Loona settings”</p></li>
-<li><p>Введите Логин и Пароль</p></li>
-</ul>
-
-<p><img src="../images/iiko1.PNG" width="900"></p>
-
-<ul>
-<li><p>Открываем Браузер</p></li>
-<li><p>Заходим на http://localhost:1234/settings</p></li>
-<li><p><strong>Задаем настройки плагина:</strong></p>
-
-<ul>
-<li>Api access token - доступен после создания сканера в кабинете</li>
-<li>Api base url - https://api.loona.ai<br></li>
-<li>Plugin url - http://localhost<br></li>
-<li>Waiter port - 1234</li>
-</ul></li>
-<li><p>Далее заполняем детали всех имеющихся уровней скидок в кабинете, и называем их</p></li>
-</ul>
-
-<p><img src="../images/iiko%20plugin%20settings.png" width="900"></p>
-
-<ul>
 <li><p><strong>Установка Скидки:</strong></p></li>
 <li><p>Открываем iiko Office</p>
 
 <ul>
 <li>Переходим в раздел Дисконтная Система -&gt; Скидки и Надбавки</li>
 <li>Добавляем скидку</li>
-<li>Обязательно пишем названия скидок <em>совпадающие с настройками плагина</em></li>
+<li>Пишем свои названия скидок как показано ниже, они будут использованы в настройках плагина</li>
 <li>Тип скидки ставим Скидки и Надбавки</li>
 <li>Нажимаем Далее</li>
 </ul></li>
@@ -269,13 +246,30 @@
 
 <ul>
 <li><p>Нажимаем Далее и заканчиваем установку скидки.</p></li>
-<li><p>Повторяем добавление скидки со всеми имеющимися уровнями скидок</p></li>
-<li><p>Добавление Бонуса:</p></li>
+<li><p><strong>Повторяем добавление скидки со всеми имеющимися уровнями скидок</strong></p></li>
+<li><p><strong>Задаем настройки плагина:</strong></p></li>
+<li><p>Открываем Браузер</p></li>
+<li><p>Заходим на http://localhost:1234/settings</p></li>
+<li><p>Задаем настройки:</p>
+
+<ul>
+<li>Api access token - доступен после создания сканера в кабинете</li>
+<li>Api base url - https://api.loona.ai<br></li>
+<li>Plugin url - http://localhost<br></li>
+<li>Waiter port - 1234</li>
+</ul></li>
+<li><p>Далее заполняем детали всех имеющихся уровней скидок в кабинете, и <strong>называем их так же как и были названы соответствующие уровни скидок в iiko office</strong></p></li>
+</ul>
+
+<p><img src="../images/iiko%20plugin%20settings.png" width="900"></p>
+
+<ul>
+<li><p><strong>Добавление Бонуса:</strong></p></li>
 <li><p>Добавляем внешний вид оплаты. Переходим в раздел “Розничные продажи”  нажимаем на “Тип платы” и добавляем новую оплату. </p></li>
 <li><p>Обязательно указываем: </p>
 
 <ul>
-<li>Наименование - LoonaPayment<br></li>
+<li>Наименование - Loona Payment<br></li>
 <li>Тип - Внешний тип оплаты<br></li>
 <li>Название в чеке - пишите что хотите<br></li>
 <li>Безналичный тип - Loona Payment</li>
@@ -289,6 +283,7 @@
 <li><p><strong>Активация 2D канера:</strong></p></li>
 <li><p>Заходим в раздел Сотрудники -&gt; Сотрудникиб и добавляем сотрудника</p></li>
 <li><p>Обязательно введите имя сотрудника &quot;Loona&quot;</p></li>
+<li><p>Ставим галочку &quot;Только для сотрудников&quot;</p></li>
 <li><p>Ставим галочку на &quot;Сотрудник&quot;</p></li>
 <li><p>Добавляем должность - &quot;Системный Администратор&quot;</p></li>
 </ul>
