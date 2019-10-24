@@ -1,6 +1,6 @@
 .become-partner__image {
   background-image: url(../images/partner-signup@2x.png);
-  height: 200px;
+  height: 300px;
   background-size: contain;
   background-repeat: no-repeat; }
 
