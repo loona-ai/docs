@@ -193,6 +193,18 @@
                     <a href="#b022bdab41" class="toc-h2 toc-link" data-title="Установка плагина">Установка плагина</a>
                   </li>
                   <li>
+                    <a href="#1e15b4ecad" class="toc-h2 toc-link" data-title="Настройки плагина">Настройки плагина</a>
+                  </li>
+                  <li>
+                    <a href="#13743185ce" class="toc-h2 toc-link" data-title="Установка Скидки">Установка Скидки</a>
+                  </li>
+                  <li>
+                    <a href="#8765197c4a" class="toc-h2 toc-link" data-title="Добавление Бонуса">Добавление Бонуса</a>
+                  </li>
+                  <li>
+                    <a href="#2d" class="toc-h2 toc-link" data-title="Активация 2D канера">Активация 2D канера</a>
+                  </li>
+                  <li>
                     <a href="#4f6db5306b" class="toc-h2 toc-link" data-title="Настройки в кабинете">Настройки в кабинете</a>
                   </li>
               </ul>
@@ -218,8 +230,30 @@
 <li><p>Копируем папку LoonaPluginSettings в C:\ProgramData </p></li>
 <li><p>Копируем папки LoonaPlugin и iikoWaiter5 в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)</p></li>
 <li><p>Запускаем iiko Front (помним что для данного метода нужна лицензии типа iikoTableService, iikoWaiter, iikoFrontPaymentPlugin)</p></li>
-<li><p><strong>Установка Скидки:</strong></p></li>
-<li><p>Открываем iiko Office</p>
+</ul>
+<h2 id='1e15b4ecad'>Настройки плагина</h2>
+<ul>
+<li><p>Открываем Браузер</p></li>
+<li><p>Заходим на http://localhost:1234/settings</p></li>
+<li><p>Задаем настройки:</p>
+
+<ul>
+<li>Api access token - доступен после создания сканера в кабинете</li>
+<li>Api base url - https://api.loona.ai<br></li>
+<li>Plugin url - http://localhost<br></li>
+<li>Waiter port - 1234</li>
+</ul></li>
+<li><p>Далее заполняем детали всех имеющихся уровней скидок в кабинете, и <strong>называем их так же как и были названы соответствующие уровни скидок в iiko office</strong></p></li>
+</ul>
+
+<p><img src="../images/iiko%20plugin%20settings.png" width="900"></p>
+
+<ul>
+<li>Устанавливаем мобильное приложение iikoWaiter5</li>
+</ul>
+<h2 id='13743185ce'>Установка Скидки</h2>
+<ul>
+<li>Открываем iiko Office
 
 <ul>
 <li>Переходим в раздел Дисконтная Система -&gt; Скидки и Надбавки</li>
@@ -247,24 +281,9 @@
 <ul>
 <li><p>Нажимаем Далее и заканчиваем установку скидки.</p></li>
 <li><p><strong>Повторяем добавление скидки со всеми имеющимися уровнями скидок</strong></p></li>
-<li><p><strong>Задаем настройки плагина:</strong></p></li>
-<li><p>Открываем Браузер</p></li>
-<li><p>Заходим на http://localhost:1234/settings</p></li>
-<li><p>Задаем настройки:</p>
-
-<ul>
-<li>Api access token - доступен после создания сканера в кабинете</li>
-<li>Api base url - https://api.loona.ai<br></li>
-<li>Plugin url - http://localhost<br></li>
-<li>Waiter port - 1234</li>
-</ul></li>
-<li><p>Далее заполняем детали всех имеющихся уровней скидок в кабинете, и <strong>называем их так же как и были названы соответствующие уровни скидок в iiko office</strong></p></li>
 </ul>
-
-<p><img src="../images/iiko%20plugin%20settings.png" width="900"></p>
-
+<h2 id='8765197c4a'>Добавление Бонуса</h2>
 <ul>
-<li><p><strong>Добавление Бонуса:</strong></p></li>
 <li><p>Добавляем внешний вид оплаты. Переходим в раздел “Розничные продажи”  нажимаем на “Тип платы” и добавляем новую оплату. </p></li>
 <li><p>Обязательно указываем: </p>
 
@@ -278,9 +297,8 @@
 </ul>
 
 <p><img src="../images/iiko6.png" width="665"></p>
-
+<h2 id='2d'>Активация 2D канера</h2>
 <ul>
-<li><p><strong>Активация 2D канера:</strong></p></li>
 <li><p>Заходим в раздел Сотрудники -&gt; Сотрудникиб и добавляем сотрудника</p></li>
 <li><p>Обязательно введите имя сотрудника &quot;Loona&quot;</p></li>
 <li><p>Ставим галочку &quot;Только для плагинов&quot;</p></li>
@@ -299,8 +317,7 @@
 <p><img src="../images/add_worker_2.png" width="600"></p>
 
 <ul>
-<li><p>Устанавливаем мобильное приложение iikoWaiter5</p></li>
-<li><p>Перезагружаем iiko front</p></li>
+<li>Перезагрузите кабинет</li>
 </ul>
 <h2 id='4f6db5306b'>Настройки в кабинете</h2><h3 id='6e3f1ab769'>Редактирование макета</h3>
 <p>Для использования скидок и бонусов в системе iiko штрихкод на карте должен содержать Номер Карты. Для настройки штрихкода на Номер Карты:</p>
@@ -505,18 +522,16 @@ begin
   encShift :=48;
   couponCodeShift:=36;
   couponSeparateSymbol := '/';    
-
   if pos('-', Parameter) > 1 then begin
         Enc := StrToIntDef(copy(Parameter, 1, pos('-', Parameter) - 1),-1);
         if Enc>0 then begin
           idString := copy(Parameter, pos('-', Parameter)+1, length(Parameter));
           
-           if pos(couponSeparateSymbol, idString) > 1 then begin
+          if pos(couponSeparateSymbol, idString) > 1 then begin
             couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
             idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)       
           end; 
-
-          id :=  StrToIntDef(idString,-1)-(enc-(enc/ratio)*ratio);
+          id :=  StrToIntDef(idString,-1);
           cardCodeResult :=     (enc shl encShift ) and (StrToInt64('0x7FFF')shl encShift);
           cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64('0xFFF')shl couponCodeShift) ) ;
           cardCodeResult :=    cardCodeResult or id;
