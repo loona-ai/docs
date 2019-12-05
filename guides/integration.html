@@ -199,7 +199,7 @@
                     <a href="#a1b4ba21e5" class="toc-h2 toc-link" data-title="Создание Купона">Создание Купона</a>
                   </li>
                   <li>
-                    <a href="#7197f4ea5f" class="toc-h2 toc-link" data-title="Создание Бонуса">Создание Бонуса</a>
+                    <a href="#fa903e6def" class="toc-h2 toc-link" data-title="Создание Бонуса или Подарочного сертификата">Создание Бонуса или Подарочного сертификата</a>
                   </li>
                   <li>
                     <a href="#1e15b4ecad" class="toc-h2 toc-link" data-title="Настройки плагина">Настройки плагина</a>
@@ -219,7 +219,16 @@
                     <a href="#b022bdab41-2" class="toc-h2 toc-link" data-title="Установка плагина">Установка плагина</a>
                   </li>
                   <li>
-                    <a href="#7197f4ea5f-2" class="toc-h2 toc-link" data-title="Создание Бонуса">Создание Бонуса</a>
+                    <a href="#b022bdab41-3" class="toc-h2 toc-link" data-title="Установка плагина">Установка плагина</a>
+                  </li>
+                  <li>
+                    <a href="#mcr" class="toc-h2 toc-link" data-title="Создание MCR алгоритма">Создание MCR алгоритма</a>
+                  </li>
+                  <li>
+                    <a href="#pds" class="toc-h2 toc-link" data-title="Настройка PDS">Настройка PDS</a>
+                  </li>
+                  <li>
+                    <a href="#fa903e6def-2" class="toc-h2 toc-link" data-title="Создание Бонуса или Подарочного сертификата">Создание Бонуса или Подарочного сертификата</a>
                   </li>
                   <li>
                     <a href="#1bb1787d93-2" class="toc-h2 toc-link" data-title="Создание Скидки">Создание Скидки</a>
@@ -240,8 +249,8 @@
         <h1 id='iiko'>iiko</h1><h2 id='b022bdab41'>Установка плагина</h2>
 <ul>
 <li><p>Копируем папку LoonaPluginSettings в C:\ProgramData </p></li>
-<li><p>Копируем папки LoonaPlugin и iikoWaiter5 в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)</p></li>
-<li><p>Запускаем iiko Front (помним что для данного метода нужна лицензии типа iikoTableService, iikoWaiter, iikoFrontPaymentPlugin)</p></li>
+<li><p>Копируем папки LoonaPlugin (и iikoWaiter5 при необходимости) в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)</p></li>
+<li><p>Запускаем iiko Front (помним что для данного метода необходима лицензия типа iikoFrontPaymentPlugin)</p></li>
 </ul>
 <h2 id='1bb1787d93'>Создание Скидки</h2>
 <ul>
@@ -272,20 +281,20 @@
 
 <ul>
 <li><p>Нажимаем Далее и заканчиваем установку скидки.</p></li>
-<li><p><strong>Повторяем добавление скидки со всеми имеющимися уровнями скидок</strong></p></li>
+<li><p><strong>Повторяем добавление скидки со всеми имеющимся уровнями скидок</strong></p></li>
 </ul>
 <h2 id='a1b4ba21e5'>Создание Купона</h2>
 <p>Для создания купона пройдите все пункты для создания скидки, но измените указаный процент скидки на 100%.</p>
-<h2 id='7197f4ea5f'>Создание Бонуса</h2>
+<h2 id='fa903e6def'>Создание Бонуса или Подарочного сертификата</h2>
 <ul>
 <li><p>Добавляем внешний вид оплаты. Переходим в раздел “Розничные продажи”  нажимаем на “Тип платы” и добавляем новую оплату. </p></li>
-<li><p>Обязательно указываем: </p>
+<li><p>Обязательно указываем данные так же: </p>
 
 <ul>
-<li>Наименование - Loona Payment<br></li>
+<li>Наименование - LoonaPayment </li>
 <li>Тип - Внешний тип оплаты<br></li>
-<li>Название в чеке - пишите что хотите<br></li>
-<li>Безналичный тип - Loona Payment</li>
+<li>Название в чеке - Электронная карта </li>
+<li>Безналичный тип - LoonaPayment</li>
 </ul></li>
 <li><p>Сохраняем</p></li>
 </ul>
@@ -298,7 +307,7 @@
 <li><p>Задаем настройки:</p>
 
 <ul>
-<li>Api access token - доступен после создания сканера в кабинете</li>
+<li>Api access token - доступен после создания сканера в кабинете (подробнее в разделе настройки кабинета) или по запросу от поддержки компании Loona</li>
 <li>Api base url - https://api.loona.ai<br></li>
 <li>Plugin url - http://localhost<br></li>
 <li>Waiter port - 1234</li>
@@ -309,11 +318,11 @@
 <p><img src="../images/iiko%20plugin%20settings.png" width="900"></p>
 
 <ul>
-<li>Устанавливаем мобильное приложение iikoWaiter5</li>
+<li>Устанавливаем мобильное приложение iikoWaiter5 если нужно</li>
 </ul>
 <h2 id='2d'>Активация 2D канера</h2>
 <ul>
-<li><p>Заходим в раздел Сотрудники -&gt; Сотрудникиб и добавляем сотрудника</p></li>
+<li><p>Заходим в раздел Сотрудники -&gt; Сотрудники и добавляем сотрудника</p></li>
 <li><p>Обязательно введите имя сотрудника &quot;Loona&quot;</p></li>
 <li><p>Ставим галочку &quot;Только для плагинов&quot;</p></li>
 <li><p>Ставим галочку на &quot;Сотрудник&quot;</p></li>
@@ -334,7 +343,7 @@
 <li>Перезагрузите кабинет</li>
 </ul>
 <h2 id='4f6db5306b'>Настройки в кабинете</h2><h3 id='6e3f1ab769'>Редактирование макета</h3>
-<p>Для использования скидок и бонусов в системе iiko штрихкод на карте должен содержать Номер Карты. Для настройки штрихкода на Номер Карты:</p>
+<p><strong>Для использования скидок, подарочных сертификатов и бонусов</strong> в системе iiko штрихкод на карте должен содержать Номер Карты. Для настройки штрихкода на Номер Карты:</p>
 
 <ul>
 <li><p>Перейдите в раздел <strong>Макеты</strong></p></li>
@@ -349,16 +358,15 @@
 <li><p>Поменяйте значение на <strong>Номер Карты</strong></p></li>
 </ul>
 
-<p>Для использования купона:</p>
+<p><strong>Для использования купона:</strong></p>
 
 <ul>
-<li><p>Обнаружить номер под которым продукта зарегистрирован в CRM системе</p></li>
 <li><p>В значении штрихкода поменять значение на “своё значение”</p></li>
-<li><p>Поменять своё значение на ${pid}/№Продукт, где “№Продукт” это номер под которым продукт зарегистрирован</p></li>
+<li><p>Поменять своё значение на ${pid}/№Продукт, где “№Продукт” это номер под которым позиция (блюдо) зарегистрирована в iikoOffice.</p></li>
 <li><p>Использовать карты Loona</p></li>
 </ul>
-<h3 id='89af512b2f'>Создание сканера для карты</h3>
-<p>Для использования системы iiko вам необходимо использовать создать сканер для получения идентификационного номера. Этот сканер будет необходим для пользования интегрированой системой с iiko․</p>
+<h3 id='api-token'>Создание API token сканера для карты</h3>
+<p>Для интеграции с системой iiko вам необходимо создать сканер в кабинете Loona и использовать его токен доступа. </p>
 
 <p>Для создания нового сканера:</p>
 
@@ -372,16 +380,20 @@
 <li><p>Нажмите Создать</p></li>
 </ul>
 
-<p>В списке созданных сканеров появится новый сканер со своим <strong>Идентификационным номером</strong>, этот номер используется при настройке плагина.</p>
+<p>В списке созданных сканеров появится новый сканер со своим <strong>токеном доступа</strong> (Идентификационный номер), этот номер используется при настройке плагина.</p>
 <h1 id='r_keeper'>r_keeper</h1><h2 id='b022bdab41-2'>Установка плагина</h2>
 <p>*В течении использования плагина, нужно выключить Windows Firewall или открыть доступ для порта плагина (port 1234)</p>
 
 <ul>
-<li>  Скачайте и откройте папку плагина Loona</li>
+<li>Скачайте и откройте папку плагина Loona</li>
 </ul>
 
 <p><img src="../images/rk1.png" width="600" ></p>
 
+<ul>
+<li>В папке для вашего удобства содержится FARCARDS со всеми необходимыми настройками в нём. Если имеется FARCARDS, можно настроить его вручную.</li>
+</ul>
+<h3 id='farcards'>Настройки FARCARDS</h3>
 <ul>
 <li>  Скопируйте «Extdll.dll» и «Extdll.ini» в папку UCS/FARCARDS</li>
 </ul>
@@ -401,9 +413,139 @@
 </ul>
 
 <p><img src="../images/rk4.png" width="700"></p>
-<h2 id='7197f4ea5f-2'>Создание Бонуса</h2>
+<h2 id='b022bdab41-3'>Установка плагина</h2>
 <ul>
-<li><p>Откройте систему r_keeper и зайдите в неё</p></li>
+<li><p>Откройте папку Loona R-keeper</p></li>
+<li><p>Скопируйте папку Loona в папку где хратится r_keeper и FARCARDS</p></li>
+</ul>
+
+<p><img src="../images/rk15.png" width="750"></p>
+
+<ul>
+<li>  Откройте скопированую папку Loona, и запустите из нее файл «ServiceInstaller.exe» как администратор</li>
+</ul>
+
+<p><img src="../images/rk16.png" width="700"></p>
+
+<ul>
+<li>  Сервис будет установлен, после установки зайдите в Windows  Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)</li>
+</ul>
+
+<p><img src="../images/rk17.png" width="900"></p>
+
+<ul>
+<li>  Не закрывайте окно сервисов</li>
+</ul>
+<h2 id='mcr'>Создание MCR алгоритма</h2>
+<ul>
+<li>  Далее, откройте r_keeper менеджер и пройдите в <strong><em>Сервисы -&gt; Обработка Сигналов Устройств -&gt; MCR алгоритмы</em></strong></li>
+</ul>
+
+<p><img src="../images/rk_extra1.PNG" width="900"> </p>
+
+<ul>
+<li>  Откроется страничка существующих алгоритмов. Убедитесь что у вас имеется алгоритм loona.</li>
+</ul>
+
+<p><img src="../images/rk_extra2.PNG" width="900"> </p>
+
+<ul>
+<li><p>Создайте новый алгоритм для элекртонных карт</p></li>
+<li><p>Для создания нового алгоритма можно просто скопировать любой имеющийся алгоритм и вставить его в окно алгоритмов. </p></li>
+</ul>
+
+<p><img src="../images/rk_extra_if1.PNG" width="600"> </p>
+
+<p><img src="../images/rk_extra_if2.PNG" width="600"> </p>
+
+<ul>
+<li><p>После этого переименуйте скопированый алгоритм на <strong>loona</strong>.</p></li>
+<li><p>Нажмите на алгоритм и откроются свойства справа, поменяйте статус на <strong>Active</strong> и затем убедитесь что все настройки совпадают с настройками представленными ниже:</p></li>
+</ul>
+
+<p><img src="../images/rk_extra_if3.png" width="900"> </p>
+
+<ul>
+<li>  Нажмите на скрипт, и откройте окно скрипта с помощью иконки слева.</li>
+</ul>
+
+<p><img src="../images/rk_extra3.png" width="900"> </p>
+
+<ul>
+<li>  В окне скрипта замените имеющийся скрипт на код расположенный ниже:</li>
+</ul>
+
+<pre><code>
+function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
+var enc: integer; id, ratio, couponeCode :integer; 
+var encShift, couponCodeShift :integer;
+var couponSeparateSymbol :String;        
+var idString:String;
+var cardCodeResult:Int64;
+begin 
+ 
+  Result:=false;           
+  ratio :=1000; 
+  encShift :=48;
+  couponCodeShift:=36;
+  couponSeparateSymbol := '/';    
+  if pos('-', Parameter) > 1 then begin
+        Enc := StrToIntDef(copy(Parameter, 1, pos('-', Parameter) - 1),-1);
+        if Enc>0 then begin
+          idString := copy(Parameter, pos('-', Parameter)+1, length(Parameter));
+          
+          if pos(couponSeparateSymbol, idString) > 1 then begin
+            couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
+            idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)       
+          end; 
+          id :=  StrToIntDef(idString,-1);
+          cardCodeResult :=     (enc shl encShift ) and (StrToInt64('0x7FFF')shl encShift);
+          cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64('0xFFF')shl couponCodeShift) ) ;
+          cardCodeResult :=    cardCodeResult or id;
+          Parameter :=Int64ToStr(cardCodeResult);
+          Result:=true;     
+        end;  
+  end;       
+end;
+<img src="../images/rk_extra4.PNG" width="900"> 
+</code></pre>
+
+<ul>
+<li>  Нажмите &quot;Ок&quot; и закройте окно</li>
+</ul>
+<h2 id='pds'>Настройка PDS</h2>
+<ul>
+<li>В r_keeper менеджере и пройдите в <strong>Сервис -&gt; Интерфейсы</strong></li>
+</ul>
+
+<p><img src="../images/Pds_rk_manager.PNG" width="600"></p>
+
+<ul>
+<li><p>В открывшемся окне создайте новый PDS (или можно настроить имеющийся), и введите данные как показано ниже</p></li>
+<li><p>Убедитесь что значение в поле <strong>Код</strong> записано в файлах TMS.ini и FARCARDS.ini:</p>
+
+<ul>
+<li>в файле TMS.ini пройдите в раздел [CARDDATA] и поменяйте значение Interface на Interface = (введите значение <em>Кода</em>)</li>
+<li>далее, в том же файле дайте то же значение для Interface в разделе [RTGI] как показано ниже</li>
+</ul>
+
+<p><img src="../images/TMS_ini.png" width="900">  </p></li>
+<li><p>Убедитесь что название созданой PDS совпадает с названием указаным в FARCARDS.ini</p>
+
+<ul>
+<li>в файле FARCARDS.ini пройдите в раздел [pds_netk] и поменяйте значение NetServerName на NetServerName = (введите название PDS)</li>
+</ul>
+
+<p><img src="../images/FARCARDS_ini.png" width="900"></p></li>
+<li><p>Далее, зайдите в созданый вами MCR алгоритм и выберите созданый PDS в поле &quot;Обьект&quot;</p>
+
+<p><img src="../images/MCR_pds.png" width="900"></p></li>
+</ul>
+<h2 id='fa903e6def-2'>Создание Бонуса или Подарочного сертификата</h2>
+<ul>
+<li><p>Зайдите в r_keeper менеджер</p></li>
+<li><p>Пройдите в типы бонусов</p></li>
+<li><p>Создайте новый бонус и назовите его <strong>LoonaBonus</strong></p></li>
 <li><p>Пройдите в меню в раздел «Деньги» и откройте «Скидки и Наценки»</p></li>
 </ul>
 
@@ -422,19 +564,19 @@
 <p><img src="../images/rk7.png" width="500"></p>
 
 <ul>
-<li>  Пройдите в окно «Скидки/Нацинки» вашей новой скидки и создайте новую скидку (Нажмите правой кнопки мышки на свободое поле, из возникших опций выберите «Новая скидка»)</li>
+<li>  Пройдите в окно «Скидки/Нацинки» и создайте новую скидку (Нажмите правой кнопки мышки на свободое поле, из возникших опций выберите «Новая скидка»)</li>
 </ul>
 
 <p><img src="../images/rk8.png" width="900"></p>
 
 <ul>
-<li>  Введите название вашей скидки, пока что не меняйте статус на активный</li>
+<li>  Введите название вашей лояльности, пока что не меняйте статус на активный</li>
 </ul>
 
 <p><img src="../images/rk9.png" width="900"></p>
 
 <ul>
-<li>  Откройте детализацию вашей скидки двойным кликом на иконку</li>
+<li>  Откройте детализацию вашей лояльности двойным кликом на иконку</li>
 </ul>
 
 <p><img src="../images/rk10.png" width="414" height="150"></p>
@@ -446,7 +588,8 @@
 <p><img src="../images/rk11.png" width="345" height="347"></p>
 
 <ul>
-<li>  Откройте поле настроек детализации, и поменяйте процент скидки на 100.00</li>
+<li><p>Откройте поле настроек детализации, и поменяйте процент скидки на 100.00</p></li>
+<li><p>далее, укажите &quot;тип бонуса&quot;: <strong>LoonaBonus</strong></p></li>
 </ul>
 
 <p><img src="../images/rk12.png" width="900"></p>
@@ -534,108 +677,17 @@
 </ul>
 <h2 id='35621b3930'>Необходимые Настройки в офисе и плагине</h2>
 <ul>
-<li><p>Откройте папку Loona R-keeper</p></li>
-<li><p>Скопируйте папку Loona в папку где хратится r_keeper и FARCARDS</p></li>
-</ul>
-
-<p><img src="../images/rk15.png" width="750"></p>
+<li><p>Откройте ваш браузер и пройдите по адресу: «localhost:1234/settings»</p></li>
+<li><p>Откроется поле настроек плагина. </p></li>
+<li><p>Задаем настройки:</p>
 
 <ul>
-<li>  Откройте скопированую папку Loona, и запустите из нее файл «ServiceInstaller.exe» как администратор</li>
-</ul>
-
-<p><img src="../images/rk16.png" width="700"></p>
-
-<ul>
-<li>  Сервис будет установлен, после установки зайдите в Windows  Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)</li>
-</ul>
-
-<p><img src="../images/rk17.png" width="900"></p>
-
-<ul>
-<li><p>Не закрывайте окно сервисов</p></li>
-<li><p>Далее, откройте r_keeper менеджер и пройдите в <strong><em>Сервисы -&gt; Обработка Сигналов Устройств -&gt; MCR алгоритмы</em></strong></p></li>
-</ul>
-
-<p><img src="../images/rk_extra1.PNG" width="900"> </p>
-
-<ul>
-<li>  Откроется страничка существующих алгоритмов. Убедитесь что у вас имеется алгоритм loona.</li>
-</ul>
-
-<p><img src="../images/rk_extra2.PNG" width="900"> </p>
-
-<ul>
-<li><p>В случае если у вас нет этого алгоритма, создайте новый.</p></li>
-<li><p>Для создания нового алгоритма можно просто скопировать любой имеющийся алгоритм и вставить его в окно алгоритмов. </p></li>
-</ul>
-
-<p><img src="../images/rk_extra_if1.PNG" width="600"> </p>
-
-<p><img src="../images/rk_extra_if2.PNG" width="600"> </p>
-
-<ul>
-<li><p>После этого, у васбудет иметься 2 одинаковых алгоритма. Переименуйте скопированый на <strong>loona</strong>.</p></li>
-<li><p>Нажмите на алгоритм и откроются свойства справа, поменяйте статус на <strong>Active</strong> и затем убедитесь что все настройки совпадают с настройками представленными ниже:</p></li>
-</ul>
-
-<p><img src="../images/rk_extra_if3.png" width="900"> </p>
-
-<ul>
-<li>  Нажмите на скрипт, и откройте окно скрипта с помощью иконки слева.</li>
-</ul>
-
-<p><img src="../images/rk_extra3.png" width="900"> </p>
-
-<ul>
-<li>  В окне скрипта замените имеющийся скрипт на код расположенный ниже:</li>
-</ul>
-
-<pre><code>
-function MCR1000028(DeviceSignal: Integer; DeviceIdent: Integer; var Parameter: String): Boolean;
-var enc: integer; id, ratio, couponeCode :integer; 
-var encShift, couponCodeShift :integer;
-var couponSeparateSymbol :String;        
-var idString:String;
-var cardCodeResult:Int64;
-begin 
- 
-  Result:=false;           
-  ratio :=1000; 
-  encShift :=48;
-  couponCodeShift:=36;
-  couponSeparateSymbol := '/';    
-  if pos('-', Parameter) > 1 then begin
-        Enc := StrToIntDef(copy(Parameter, 1, pos('-', Parameter) - 1),-1);
-        if Enc>0 then begin
-          idString := copy(Parameter, pos('-', Parameter)+1, length(Parameter));
-          
-          if pos(couponSeparateSymbol, idString) > 1 then begin
-            couponeCode := StrToIntDef(copy(idString, pos(couponSeparateSymbol, idString)+1, length(idString)),-1);
-            idString :=   copy(idString, 1, pos(couponSeparateSymbol, idString) - 1)       
-          end; 
-          id :=  StrToIntDef(idString,-1);
-          cardCodeResult :=     (enc shl encShift ) and (StrToInt64('0x7FFF')shl encShift);
-          cardCodeResult :=    cardCodeResult or ((couponeCode shl couponCodeShift) and (StrToInt64('0xFFF')shl couponCodeShift) ) ;
-          cardCodeResult :=    cardCodeResult or id;
-          Parameter :=Int64ToStr(cardCodeResult);
-          Result:=true;     
-        end;  
-  end;       
-end;
-<img src="../images/rk_extra4.PNG" width="900"> 
-</code></pre>
-
-<ul>
-<li><p>Нажмите &quot;Ок&quot; и закройте окно</p></li>
-<li><p>Затем откройте ваш браузер</p></li>
-<li><p>Введите адрес плагина в браузере, адрес: «localhost:1234/settings»</p></li>
-<li><p>Откроется поле настроек плагина. Введите необходимые параметры для настройки скидки и сохраните параметры. Код вашей скидки вам доступен в свойствах скидки в r_keeper manager.</p>
-
-<ul>
-<li>Для получения Идентификационного номера сканера и URL API приложения обратитесь к документации приложения Loona. В случае если URL приложения это &quot;https://app.loona.ai&quot;, то URL API приложения это: &quot;https://api.loona.ai&quot;.</li>
-<li>При изменениях порта на «XXXX», адрес плагина меняется на localhost:XXXX/settings (но нет необходимости менять порт) </li>
+<li>Api access token - доступен после создания сканера в кабинете (подробнее в разделе настройки кабинета) или по запросу от поддержки компании Loona</li>
+<li>Api base url - https://api.loona.ai<br></li>
+<li>Plugin url - http://localhost<br></li>
+<li>Waiter port - 1234</li>
 </ul></li>
+<li><p>Далее, Введите необходимые параметры для настройки скидки и сохраните параметры. Код вашей скидки, бонуса или купона вам доступен в свойствах скидки в r_keeper manager.</p></li>
 </ul>
 
 <p><img src="../images/rk_plugin_levels.png" width="900"> </p>
@@ -664,8 +716,8 @@ end;
 <li><p>Поменяйте тип штрихкода на QR</p></li>
 <li><p>Поменяйте значение на <strong>Номер Карты</strong></p></li>
 </ul>
-<h3 id='89af512b2f-2'>Создание сканера для карты</h3>
-<p>Для использования системы r_keeper вам необходимо использовать создать сканер для получения идентификационного номера. Этот сканер будет необходим для пользования интегрированой системой с iiko․</p>
+<h3 id='api-token-2'>Создание API Token сканера для карты</h3>
+<p>Для иинтеграции с r_keeper вам необходимо создать сканер в кабинете Loona и использовать его токен доступа. </p>
 
 <p>Для создания нового сканера:</p>
 
