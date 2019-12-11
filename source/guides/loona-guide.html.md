@@ -49,10 +49,9 @@ home: false
 
 <img src="../images/InsertVariableGif.gif" alt="Dropdown variable add">
 
-<img src="../images/Changing%20barcode%20and%20scanner%20URL.gif" width="600" alt="Changing barcode">
-
 В настройках поля штрихкода возможно настроить тип штрихкода и его значение (при использовании [веб-сканера Loona](https://docs.loona.ai/guides/loona-guide.html#loona-2) рекомендуется выбрать опцию «URL сканера»).
 
+<img src="../images/Changing%20barcode%20and%20scanner%20URL.gif" width="600" alt="Changing barcode">
 
 ##Параметры изображений
 
