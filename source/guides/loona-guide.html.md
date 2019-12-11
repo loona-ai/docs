@@ -47,7 +47,7 @@ home: false
 
 Для **добавления переменных** на лицевую или оборотную сторону карты используйте «@» в текстовом поле и выберите переменную из  стандартных и созданных вами **Переменных**. Так на карты можно добавлять персонализированные данные полученные из по итогам анкетирования и информацию из системы лояльности.
 
-<img src="../images/insertVariableGif.gif" width="200" alt="Dropdown variable add">
+<img src="../images/insertVariableGif.gif" alt="Dropdown variable add">
 
 <img src="../images/Changing%20barcode%20and%20scanner%20URL.gif" width="600" alt="Changing barcode">
 
