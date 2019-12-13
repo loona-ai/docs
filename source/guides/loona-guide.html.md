@@ -324,7 +324,7 @@ UTM-метки позволяют создавать отличающиеся с
 - "Транзакции" - транзакции проведенные с помощью сканеров
 - "Транзакции со стороны администратора" - все изменения администратором из кабинета
 
-<img src="../images/transaction_analytics.PNG" width="600" alt="transactions sections and analytics">
+<img src="../images/transaction_analytics.PNG" width="900" alt="transactions sections and analytics">
 
 В разделе "Тразакции" имеются поля общей **аналитики** в верхней части. Параметры:
 
@@ -335,7 +335,7 @@ UTM-метки позволяют создавать отличающиеся с
 
 **Таблица истории** сохраняет данные транзакций. В ней доступны все транзакции по 20/50/100 транзакций на страницу (детализация выбирается внизу страницы).
 
-<img src="../images/transactions_screen.png" width="600" alt="transactions history">
+<img src="../images/transactions_screen.png" width="900" alt="transactions history">
 
 В таблице имеется сортирование по всем столбцам (при нажатии на параметр вверху столбца) и фильтрация. Фильтры открываются при нажатии на иконку фильтра <img src="../images/transactions_filter.PNG" width="40" alt="transactions filter">. В фильтре можно отбирать данные по Датам, Макетам, Сканерам и Типам Карт.
 
