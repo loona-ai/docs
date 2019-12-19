@@ -73,7 +73,7 @@ home: false
 
 - Устанавливаем мобильное приложение iikoWaiter5 если нужно
 
-## Активация кнопки в iiko waiter
+## Активация сканирования в iiko waiter
 
 - Зайдите в localhost:8100/settings через браузер
 
