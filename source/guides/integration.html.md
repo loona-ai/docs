@@ -73,6 +73,32 @@ home: false
 
 - Устанавливаем мобильное приложение iikoWaiter5 если нужно
 
+## Активация кнопки в iiko waiter
+
+- Зайдите в localhost:8100/settings через браузер
+
+- Пройдите к "Loyalty System Integration Settings"
+
+- Задайте настройки:
+    - Loyalty plugin address: localhost:1234/api/op
+    - Отметьте "галочкой" Is External Loyalty Enabled
+
+<img src="../images/iiko_waiter_settings.png" width="800">
+
+- Сохраните настройки
+
+*Если не можете зайти в настройки по ссылке выше*:
+
+- Зайдите в кассу
+
+- Нажмите на "Дополнения" и затем на "iikoWaiter Настройки"
+
+<img src="../images/iiko_settings.png" width="800">
+
+- Откроется QR код, отсканируйте его и пройдите по ссылке
+
+<img src="../images/iiko_setting_address.png" width="800">
+
 ## Активация 2D канера
 
 - Заходим в раздел Сотрудники -> Сотрудники и добавляем сотрудника
