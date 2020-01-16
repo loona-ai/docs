@@ -175,6 +175,17 @@ html, body {
     font-size: 12px;
   }
 
+  .toc-list-h3 {
+    display: none;
+    background-color: $nav-subitem-bg;
+    font-weight: 500;
+  }
+
+  .toc-h3 {
+    padding-left: $nav-padding + $nav-indent +5px;
+    font-size: 10px;
+  }
+
   .toc-footer {
     padding: $nav-padding 0;
     margin-top: 1em;
