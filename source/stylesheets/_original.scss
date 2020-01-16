@@ -182,7 +182,7 @@ html, body {
   }
 
   .toc-h3 {
-    padding-left: $nav-padding + $nav-indent +5px;
+    padding-left: $nav-padding + $nav-indent -5px;
     font-size: 10px;
   }
 
