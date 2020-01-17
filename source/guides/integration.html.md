@@ -7,9 +7,13 @@ home: false
 ---
 # iiko
 ## Установка плагина
-- Копируем папку LoonaPluginSettings в C:\ProgramData 
+- Скопируйте папку LoonaPluginSettings в C:\ProgramData 
 
-- Копируем папки LoonaPlugin (и iikoWaiter5 при необходимости) в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)
+- Скопируйте папку LoonaPlugin (и iikoWaiter5 при необходимости) в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)
+
+- Пройдите в свойства папки, зайдите в Безопасность, и дайте полный контроль Пользователю с которого вы заходите в систему
+
+<img src="../images/iiko_plugin_permissions.png" width="1000">
 
 - Запускаем iiko Front (помним что для данного метода необходима лицензия типа iikoFrontPaymentPlugin)
 
@@ -21,7 +25,7 @@ home: false
     - Пишем свои названия скидок как показано ниже, они будут использованы в настройках плагина
     - Тип скидки ставим Скидки и Надбавки
     - Нажимаем Далее
-    
+
 <img src="../images/iiko%20add%20skidka.png" width="900">
 
 - Убираем галочку "Можно назначить вручную", остальное по усмотрению ресторана
