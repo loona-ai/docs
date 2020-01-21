@@ -67,9 +67,10 @@ home: false
 
 - Задаем настройки:
    - Api access token - доступен после создания сканера в кабинете (подробнее в разделе настройки кабинета) или по запросу от поддержки компании Loona
-   - Api base url - https://api.loona.ai  
+   - Api base url - https://api.loona.ai 
    - Plugin url - http://localhost  
    - Waiter port - 1234
+   - Update URL - https://storage.yandexcloud.net/loona-common/loona-plugin/
  
 - Далее заполняем детали всех имеющихся уровней скидок в кабинете, и **называем их так же как названы соответствующие уровни скидок в iiko office**
 
@@ -189,9 +190,7 @@ home: false
 
 - Необходимо настроить имеющийся FARCARDS.ini (настройки ниже)
 
-- Скачайте и откройте папку плагина Loona
-
- <img src="../images/rk1.png" width="600" >
+- Скачайте и откройте папку (дистрибутив) плагина Loona
 
 - Запустите Setup.exe от имени администратора
 
@@ -199,7 +198,7 @@ home: false
 
 <img src="../images/loona_plugin_setup.png" width="600" >
 
--	После установки зайдите в Windows -> Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)
+- После установки зайдите в Windows -> Services (Сервисы), найдите Loona r-keeper plugin и убедитесь что «Startup Type» стоит автоматичекий (Automatic)
 
  <img src="../images/rk17.png" width="900">
 
@@ -291,7 +290,7 @@ end;
 <img src="../images/rk_extra4.PNG" width="900"> 
 </code></pre>
 
--   Нажмите "Ок" и закройте окно
+- Нажмите "Ок" и закройте окно
 
 ## Настройка PDS
 
@@ -362,6 +361,7 @@ end;
     <img src="../images/MCR_pds.png" width="900">
     
 ## Создание Бонуса или Подарочного сертификата
+
 -	Зайдите в r_keeper менеджер
 
 -   Пройдите в типы бонусов
@@ -473,6 +473,9 @@ end;
    - Api base url - https://api.loona.ai  
    - Plugin url - http://localhost  
    - Waiter port - 1234
+   - Update URL - https://storage.yandexcloud.net/loona-common/loona-plugin/
+   - Loona Plugin Path - папка в которой установлен плагин Loona
+   - Farcards Path - папка в которой находится Farcards.exe
   
 - Далее, Введите необходимые параметры для настройки скидки и сохраните параметры. Код вашей скидки, бонуса или купона вам доступен в свойствах скидки в r_keeper manager.
 
