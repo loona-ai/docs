@@ -6,7 +6,9 @@ search: true
 home: false
 ---
 # iiko
+
 ## Установка плагина
+
 - Скопируйте папку LoonaPluginSettings в C:\ProgramData 
 
 - Скопируйте папку LoonaPlugin (и iikoWaiter5 при необходимости) в директорию iikoFront/Plugins (в нашем случае C:\Program Files\iiko\iikoRMS\Front.Net\Plugins)
@@ -521,7 +523,7 @@ end;
 
 ## Создание API Token сканера для карты
 
-Для иинтеграции с r_keeper вам необходимо создать сканер в кабинете Loona и использовать его токен доступа. 
+Для интеграции с r_keeper вам необходимо создать сканер в кабинете Loona и использовать его токен доступа. 
 
 Для создания нового сканера:
 
