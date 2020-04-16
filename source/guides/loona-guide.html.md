@@ -13,9 +13,7 @@ home: false
 
 ## 01 Регистрация Кабинета
 
-<video width="600" controls>
-<source scr="../images/QS_Reg1.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WCIapdTNids" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Пройдите Регистрацию на платформе по ссылке app.loona.ai/signup
 
@@ -23,9 +21,7 @@ home: false
 
 ## 02 Создание Макета
 
-<video width="600" controls>
-<source scr="../images/QS_Create2.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0cn3qX1f4MI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Первый шаг - это создание макета. Макет - это шаблон на основе которого будут создаваться все карты пользователей.
 
@@ -35,9 +31,7 @@ home: false
 
 ## 03 Дизайн Макета
 
-<video width="600" controls>
-<source scr="../images/QS_Design3.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N9-5EZjOshg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - После создания макета, необходимо заполнить дизайны и контент карт Apple Wallet и Google Pay (Дизайн Wallet Passes будет продублирован с Apple Wallet).
 
@@ -49,9 +43,7 @@ home: false
 
 ## 04 Настройки Системы Лояльности
 
-<video width="600" controls>
-<source scr="../images/QS_Loyalty4.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OLdinw6oFbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Если Вы создаете карты лояльности необходимо создать и настроить механики лояльности.
 
@@ -61,9 +53,7 @@ home: false
 
 ## 05 Заполнение Регистрационной Формы
 
-<video width="600" controls>
-<source scr="../images/QS_Reg5.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qub9A29rRfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Если пользователи будут проходить регистрацию до или после скачивания карты, необходимо создать и заполнить регистрационную форму в разделе **Формы**.
 
@@ -77,9 +67,7 @@ home: false
 
 ## 06 Распространение и UTM метки
 
-<video width="600" controls>
-<source scr="../images/QS_Loyalty4.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zIHgkwP_wQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Для распространения карт зайдите в профиль макета. Для этого пройдите в раздел **Макеты**, выберите Ваш макет и нажмите на "Открыть".
 
@@ -87,9 +75,7 @@ home: false
 
 **Создание UTM:**
 
-<video width="600" controls>
-<source scr="../images/QS_Loyalty4.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ebyzEslZLt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Макеты
 В разделе [Макеты](https://app.loona.ai/templates) создаются и редактируются макеты карт. 
@@ -143,11 +129,11 @@ home: false
 
 **Размеры изображений**:
 
-|   	|Стандарт  	|Рекомендуемый Максимум  |  	
-|---	|---	|---	|
+|   	|Стандарт  	    |Рекомендуемый Максимум  |  	
+|---	|---	        |---	|
 |Иконка	|29x29 пикс.  	|87x87 пикс.   	|     	
 |Лого   |160x50 пикс.   |480x150 пикс.  	|
-|Баннер  |375x144 пикс. 	|1125x432 пикс.   	|   	
+|Баннер |375x144 пикс. 	|1125x432 пикс.   	|   	
 
 ## Переменные
 
@@ -447,7 +433,7 @@ UTM-метки позволяют создавать отличающиеся с
 
 В личный кабинет можно пройти с любого места в приложении, нажав на <img src="../images/иконка%20настроек.PNG" width="15" height="15" alt="настройки"> настройки.
 
-##Настройки профиля
+## Настройки профиля
 
 В разделе "Профиль" доступны изменения в профиле пользователя и в профиле компании, нажав на "Редактировать" в соответствующем поле. В настройках профиля можно подписаться на нашу информационную рассылку. Также в нижней части раздела можно удалить данный аккаунт.
 
