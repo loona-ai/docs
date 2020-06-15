@@ -324,6 +324,11 @@ html, body {
       width: 100%;
       clear: right;
     }
+    .code-page.api-content & {
+      width: $examples-width;
+      float:right;
+      clear: right;
+    }
 
     box-sizing: border-box;
 
