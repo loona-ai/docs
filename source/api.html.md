@@ -4,13 +4,9 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
+  - <a href='https://app.loona.ai/signup'>Получить API ключ</a>
 
 includes:
   - errors
@@ -20,222 +16,165 @@ search: true
 code_clipboard: true
 ---
 
-# Introduction
+# Основы работы с API
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+## Обзор
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Документация предназначена для разработчиков, которые хотят интегрироваться с платформой Loona.ai. В целом возможны два варианта интеграции:
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+1. Использование системы лояльности Loona, что подразумевает проведение транзакций по использованию и погашению электронных карт (**купон**, **чоп карты**), по списанию с баланса во время покупки (**бонусные карты** и **подарочные сертификаты**) или же по применению скидки а накоплению на баланс (**скидочные** и **бонусные** карты, соответственно) с одновременным увеличением суммы покупок и переходом при достижении нужного порога на более высокий уревень лояльности. 
+2. Реализация собственной системы лояльности через карты Loona. Данный API предоставляет возможность самим создавать карты и изменять значения данных, а также статус и срок истечения (т.е. производить транзакции на своей стороне и обновлять карты на нашей). При создании карты будет доступна ссылка для скачивания, а при каждой модификации система Loona автоматически обеспечит почти мгновенное обновление на устройстве владельца карты.
 
-# Authentication
+Для реализации первого варианта разработчикам потребуется `Transactions API`, а также endpoint `GET /passes/encrypted/{encryptedId}` для получения информации о карте клиента. 
 
-> To authorize, use this code:
+Для реализации второго варианта необходимо воспользоваться `Templates API` и `Passes API` (кроме вышеуказанного).
 
-```ruby
-require 'kittn'
+Базовым адресом API является `https://api.loona.ai/version1`
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+## Аутентификация
 
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
+> Для прохождения авторизации воспользуйтесь следующим примером
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+curl https://api.loona.ai/oauth/token \
+  -X POST \
+  -H 'Authorization: Basic Y2xpZW50Og==' \
+  -d 'grant_type=client_credentials'
 ```
 
-```javascript
-const kittn = require('kittn');
 
-let api = kittn.authorize('meowmeowmeow');
+
+```shell
+# Пример ответа
+{
+  "access_token": "eyJhb***********YW1lIjoiZ2xvYmF",
+  "token_type": "bearer",
+  "expires_in": 299,
+  "scope": "any",
+  "jti": "0e6da94a-8a35-4b6e-85da-8f54eb1be88b"
+}
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+Все запросы API требуют аутентификации. Нужно установить HTTP-заголовок авторизации, который включает в себя тип Bearer и access token.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+#### Пример заголовка
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+`Authorization: Bearer eyJhb***********YW1lIjoiZ2xvYmF`
 
-`Authorization: meowmeowmeow`
+Для получения токена необходимо отправить POST запрос на `/oauth/token` с указанием client id(идентификатор) и secret(секретный ключ) в заголовке, которые можно получить в вашем личном кабинете app.loona.ai, в разделе API -> Клиенты. Для работы с API вам потребуется создать клиент типа APP. Скопируйте и сохраните секретный ключ в безопасном месте, так как после закрытия данного окна ключ будет недоступен. Ключ можно будет заменить на новый в любое время, тогда как старый станет недействительным. Что касается client id, то он будет доступен для копирования всегда.
+
+Создание заголовка для получения access token:
+- Идентификатор клиента и секретный ключ объединяются с использованием двоеточия (:) в качестве разделителя `<clientId>:<secret>`
+- Полученная строка кодируется с использованием кодировки Base64.
+- Закодированная строка добавляется после типа "Basic".
+
+А также нужно указать параметр **grant_type: *client_credentials***
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Не забудьте заменить eyJhb***********YW1lIjoiZ2xvYmF на свой личный API ключ.
 </aside>
 
-# Kittens
+# Транзакции
 
-## Get All Kittens
+## Идемпотентность
 
-```ruby
-require 'kittn'
+В контексте API идемпотентность означает, что многократные запросы обрабатываются так же, как однократные.
+Это значит, что получив повторный запрос с теми же параметрами(в частности, passId), Loona выдаст в ответе результат исходного запроса.
+Такое поведение помогает избежать нежелательного повторения транзакций. Например, если при проведении транзакции возникли проблемы с сетью, и соединение прервалось, вы сможете безопасно повторить нужный запрос неограниченное количество раз.
+GET-запросы являются по умолчанию идемпотентными, так как не имеют нежелательных последствий.
+Для обеспечения идемпотентности POST-запросов используется заголовок Idempotence-Key (или ключ идемпотентности).
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+#### Пример заголовка
+`Idempotence-Key: anyUniqueIdentifier`
 
-```python
-import kittn
+## Значение QR кода на карте
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+В зависимости от настроек в личном кабинете QR код может иметь следующие значения:
+- статичный уникальный идентификатор карты
+- статичный уникальный идентификатор карты в зашифрованном виде
+- динамичный уникальный идентификатор карты в зашифрованном виде (меняется после каждой транзакции)
+
+Значение QR кода, который по умолчанию представляет собой статичный зашифрованный идентификатор карты, нужно отправить в HTTP-заголовке X-Loona-Encrypted-Key при запросах на проведение транзакции. Если encryptedId недействительный, тогда система выдаст ошибку 400. Возможной причиной такой ошибки может быть отсутствие интернета на устройстве владельца карты, вследствие чего карта не была обновлена после последней транзакции (ее в любое время можно обновлять вручную при подключении к интернету). Если хотите избежать подобного сценария, то всегда можете `Отключить динамический QR-code` в настройках макета в вашем личном 
+ кабинете.
+#### Пример заголовка
+`X-Loona-Encrypted-Key: 6179518025`
+
+## Типы транзакций
+
+> Пример запроса
+
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl https://api.loona.ai/version1/transactions/<transaction type> \
+  -X POST \
+  -H 'Authorization: Bearer <Токен доступа>' \
+  -H 'Idempotence-Key: <Ключ идемпотентности>' \
+  -H 'X-Loona-Encrypted-Key: <Зашифрованный идентификатор карты, полученный через чтение значения QR кода>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "passId": <идентификатор карты в системе Loona, полученный в ответе запроса GET под полем id>,
+        "purchaseId": "<идентификатор заказа/покупки/действия на вашей стороне>"
+        // другие поля
+      }'
 ```
 
-```javascript
-const kittn = require('kittn');
+На данный момент в рамках системы лояльности Loona поддерживаются следующие типы транзакций: 
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+- **purchase**: для скидочных и бонусных карт
+- **spending**:  для бонусных и подарочных карт
+- **purchase-spending**: для бонусных карт
+- **status**: для купонов
+- **chop**: для чоп карт
+
+Информацию о запросах и ответах каждого из вышеперечисленных запросов можете найти в детализированной [**документации**](https://api.loona.ai/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/) Loona API
+
+# API ресурсы
+
+## Получить список карт
+
+```shell
+curl https://api.loona.ai/version1/passes \
+  -X GET \
+  -H 'Authorization: Bearer <Токен доступа>' \
+  -H 'Content-Type: application/json' \
 ```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://api.loona.ai/version1/passes`
 
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+## Создать карту
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl https://api.loona.ai/version1/passes \
+  -X POST \
+  -H 'Authorization: Bearer <Токен доступа>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "templateId": 0,
+        "placeholderValues": [
+          {
+            "name": "string",
+            "value": "string"
+          }
+        ]
+      }'
 ```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`POST https://api.loona.ai/version1/passes`
 
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
+## Получить карту по id
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
+curl https://api.loona.ai/version1/passes/{id} \
+  -X GET \
+  -H 'Authorization: Bearer <Токен доступа>' \
+  -H 'Content-Type: application/json' \
+
 ```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
+`GET https://api.loona.ai/version1/passes/{id}`
