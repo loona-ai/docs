@@ -6,7 +6,8 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>API Reference</title>
-    <style>
+
+    <style media="screen">
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
@@ -85,91 +86,95 @@
 .highlight .ss {
   color: #a6e22e;
 }
-      .tab-json--inline table td { padding: 5px; }
-.tab-json--inline table pre { margin: 0; }
-.tab-json--inline, .tab-json--inline .w {
+    </style>
+    <style media="print">
+      * {
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
   color: #586e75;
 }
-.tab-json--inline .err {
+.highlight .err {
   color: #002b36;
   background-color: #dc322f;
 }
-.tab-json--inline .c, .tab-json--inline .cd, .tab-json--inline .cm, .tab-json--inline .c1, .tab-json--inline .cs {
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
   color: #657b83;
 }
-.tab-json--inline .cp {
+.highlight .cp {
   color: #b58900;
 }
-.tab-json--inline .nt {
+.highlight .nt {
   color: #b58900;
 }
-.tab-json--inline .o, .tab-json--inline .ow {
+.highlight .o, .highlight .ow {
   color: #93a1a1;
 }
-.tab-json--inline .p, .tab-json--inline .pi {
+.highlight .p, .highlight .pi {
   color: #93a1a1;
 }
-.tab-json--inline .gi {
+.highlight .gi {
   color: #859900;
 }
-.tab-json--inline .gd {
+.highlight .gd {
   color: #dc322f;
 }
-.tab-json--inline .gh {
+.highlight .gh {
   color: #268bd2;
   background-color: #002b36;
   font-weight: bold;
 }
-.tab-json--inline .k, .tab-json--inline .kn, .tab-json--inline .kp, .tab-json--inline .kr, .tab-json--inline .kv {
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
   color: #6c71c4;
 }
-.tab-json--inline .kc {
+.highlight .kc {
   color: #cb4b16;
 }
-.tab-json--inline .kt {
+.highlight .kt {
   color: #cb4b16;
 }
-.tab-json--inline .kd {
+.highlight .kd {
   color: #cb4b16;
 }
-.tab-json--inline .s, .tab-json--inline .sb, .tab-json--inline .sc, .tab-json--inline .sd, .tab-json--inline .s2, .tab-json--inline .sh, .tab-json--inline .sx, .tab-json--inline .s1 {
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
   color: #859900;
 }
-.tab-json--inline .sr {
+.highlight .sr {
   color: #2aa198;
 }
-.tab-json--inline .si {
+.highlight .si {
   color: #d33682;
 }
-.tab-json--inline .se {
+.highlight .se {
   color: #d33682;
 }
-.tab-json--inline .nn {
+.highlight .nn {
   color: #b58900;
 }
-.tab-json--inline .nc {
+.highlight .nc {
   color: #b58900;
 }
-.tab-json--inline .no {
+.highlight .no {
   color: #b58900;
 }
-.tab-json--inline .na {
+.highlight .na {
   color: #268bd2;
 }
-.tab-json--inline .m, .tab-json--inline .mf, .tab-json--inline .mh, .tab-json--inline .mi, .tab-json--inline .il, .tab-json--inline .mo, .tab-json--inline .mb, .tab-json--inline .mx {
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
   color: #859900;
 }
-.tab-json--inline .ss {
+.highlight .ss {
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/api.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-    <link href="images/favicon.ico" rel="icon" type="image/ico" />
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="api" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="api" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
           <span>
             <img src="images/navbar-2.png" alt="Navbar 2" />
@@ -182,229 +187,182 @@
       </a>
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
-      <div id="toc" class="toc-list-h1">
-          <a class="faux-toc-link" href="/">Back to documentation</a>
+      <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#api" class="toc-h1 toc-link" data-title="Основы работы с API">Основы работы с API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#39c6387206" class="toc-h2 toc-link" data-title="Обзор">Обзор</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#a1ce3c1a83" class="toc-h2 toc-link" data-title="Аутентификация">Аутентификация</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#db706448c8" class="toc-h1 toc-link" data-title="Транзакции">Транзакции</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#3c7692c5ba" class="toc-h2 toc-link" data-title="Идемпотентность">Идемпотентность</a>
+                  </li>
+                  <li>
+                    <a href="#qr" class="toc-h2 toc-link" data-title="Значение QR кода на карте">Значение QR кода на карте</a>
+                  </li>
+                  <li>
+                    <a href="#e8924843c1" class="toc-h2 toc-link" data-title="Типы транзакций">Типы транзакций</a>
+                  </li>
+              </ul>
           </li>
-      </div>
-
+          <li>
+            <a href="#api-2" class="toc-h1 toc-link" data-title="API ресурсы">API ресурсы</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#e2f76dd6d7" class="toc-h2 toc-link" data-title="Получить список карт">Получить список карт</a>
+                  </li>
+                  <li>
+                    <a href="#2e56337ac9" class="toc-h2 toc-link" data-title="Создать карту">Создать карту</a>
+                  </li>
+                  <li>
+                    <a href="#id" class="toc-h2 toc-link" data-title="Получить карту по id">Получить карту по id</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#681b5ae3d2" class="toc-h1 toc-link" data-title="Ошибки">Ошибки</a>
+          </li>
+      </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://app.loona.ai/signup'>Получить API ключ</a></li>
         </ul>
     </div>
     <div class="page-wrapper code-page api-content">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='api'>Основы работы с API</h1><h2 id='39c6387206'>Обзор</h2>
+<p>Документация предназначена для разработчиков, которые хотят интегрироваться с платформой Loona.ai. В целом возможны два варианта интеграции:</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<ol>
+<li>Использование системы лояльности Loona, что подразумевает проведение транзакций по использованию и погашению электронных карт (<strong>купон</strong>, <strong>чоп карты</strong>), по списанию с баланса во время покупки (<strong>бонусные карты</strong> и <strong>подарочные сертификаты</strong>) или же по применению скидки а накоплению на баланс (<strong>скидочные</strong> и <strong>бонусные</strong> карты, соответственно) с одновременным увеличением суммы покупок и переходом при достижении нужного порога на более высокий уревень лояльности. </li>
+<li>Реализация собственной системы лояльности через карты Loona. Данный API предоставляет возможность самим создавать карты и изменять значения данных, а также статус и срок истечения (т.е. производить транзакции на своей стороне и обновлять карты на нашей). При создании карты будет доступна ссылка для скачивания, а при каждой модификации система Loona автоматически обеспечит почти мгновенное обновление на устройстве владельца карты.</li>
+</ol>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>Для реализации первого варианта разработчикам потребуется <code>Transactions API</code>, а также endpoint <code>GET /passes/encrypted/{encryptedId}</code> для получения информации о карте клиента. </p>
+
+<p>Для реализации второго варианта необходимо воспользоваться <code>Templates API</code> и <code>Passes API</code> (кроме вышеуказанного).</p>
+
+<p>Базовым адресом API является <code>https://api.loona.ai/version1</code></p>
+<h2 id='a1ce3c1a83'>Аутентификация</h2>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Для прохождения авторизации воспользуйтесь следующим примером</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/oauth/token <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s1">'Authorization: Basic Y2xpZW50Og=='</span> <span class="se">\</span>
+  -d <span class="s1">'grant_type=client_credentials'</span>
+</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># Пример ответа</span>
+<span class="o">{</span>
+  <span class="s2">"access_token"</span>: <span class="s2">"eyJhb***********YW1lIjoiZ2xvYmF"</span>,
+  <span class="s2">"token_type"</span>: <span class="s2">"bearer"</span>,
+  <span class="s2">"expires_in"</span>: 299,
+  <span class="s2">"scope"</span>: <span class="s2">"any"</span>,
+  <span class="s2">"jti"</span>: <span class="s2">"0e6da94a-8a35-4b6e-85da-8f54eb1be88b"</span>
+<span class="o">}</span>
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>Все запросы API требуют аутентификации. Нужно установить HTTP-заголовок авторизации, который включает в себя тип Bearer и access token.</p>
+<h4 id='7c48485c72'>Пример заголовка</h4>
+<p><code>Authorization: Bearer eyJhb***********YW1lIjoiZ2xvYmF</code></p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Для получения токена необходимо отправить POST запрос на <code>/oauth/token</code> с указанием client id(идентификатор) и secret(секретный ключ) в заголовке, которые можно получить в вашем личном кабинете app.loona.ai, в разделе API -&gt; Клиенты. Для работы с API вам потребуется создать клиент типа APP. Скопируйте и сохраните секретный ключ в безопасном месте, так как после закрытия данного окна ключ будет недоступен. Ключ можно будет заменить на новый в любое время, тогда как старый станет недействительным. Что касается client id, то он будет доступен для копирования всегда.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Создание заголовка для получения access token:
+- Идентификатор клиента и секретный ключ объединяются с использованием двоеточия (:) в качестве разделителя <code>&lt;clientId&gt;:&lt;secret&gt;</code>
+- Полученная строка кодируется с использованием кодировки Base64.
+- Закодированная строка добавляется после типа &quot;Basic&quot;.</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>А также нужно указать параметр <strong>grant_type: *client_credentials</strong>*</p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Не забудьте заменить eyJhb***********YW1lIjoiZ2xvYmF на свой личный API ключ.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='db706448c8'>Транзакции</h1><h2 id='3c7692c5ba'>Идемпотентность</h2>
+<p>В контексте API идемпотентность означает, что многократные запросы обрабатываются так же, как однократные.
+Это значит, что получив повторный запрос с теми же параметрами(в частности, passId), Loona выдаст в ответе результат исходного запроса.
+Такое поведение помогает избежать нежелательного повторения транзакций. Например, если при проведении транзакции возникли проблемы с сетью, и соединение прервалось, вы сможете безопасно повторить нужный запрос неограниченное количество раз.
+GET-запросы являются по умолчанию идемпотентными, так как не имеют нежелательных последствий.
+Для обеспечения идемпотентности POST-запросов используется заголовок Idempotence-Key (или ключ идемпотентности).</p>
+<h4 id='7c48485c72-2'>Пример заголовка</h4>
+<p><code>Idempotence-Key: anyUniqueIdentifier</code></p>
+<h2 id='qr'>Значение QR кода на карте</h2>
+<p>В зависимости от настроек в личном кабинете QR код может иметь следующие значения:
+- статичный уникальный идентификатор карты
+- статичный уникальный идентификатор карты в зашифрованном виде
+- динамичный уникальный идентификатор карты в зашифрованном виде (меняется после каждой транзакции)</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
+<p>Значение QR кода, который по умолчанию представляет собой статичный зашифрованный идентификатор карты, нужно отправить в HTTP-заголовке X-Loona-Encrypted-Key при запросах на проведение транзакции. Если encryptedId недействительный, тогда система выдаст ошибку 400. Возможной причиной такой ошибки может быть отсутствие интернета на устройстве владельца карты, вследствие чего карта не была обновлена после последней транзакции (ее в любое время можно обновлять вручную при подключении к интернету). Если хотите избежать подобного сценария, то всегда можете <code>Отключить динамический QR-code</code> в настройках макета в вашем личном 
+ кабинете.</p>
+<h4 id='7c48485c72-3'>Пример заголовка</h4>
+<p><code>X-Loona-Encrypted-Key: 6179518025</code></p>
+<h2 id='e8924843c1'>Типы транзакций</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Пример запроса</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/transactions/&lt;transaction <span class="nb">type</span>&gt; <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
+  -H <span class="s1">'Idempotence-Key: &lt;Ключ идемпотентности&gt;'</span> <span class="se">\</span>
+  -H <span class="s1">'X-Loona-Encrypted-Key: &lt;Зашифрованный идентификатор карты, полученный через чтение значения QR кода&gt;'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "passId": &lt;идентификатор карты в системе Loona, полученный в ответе запроса GET под полем id&gt;,
+        "purchaseId": "&lt;идентификатор заказа/покупки/действия на вашей стороне&gt;"
+        // другие поля
+      }'</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>На данный момент в рамках системы лояльности Loona поддерживаются следующие типы транзакций: </p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<ul>
+<li><strong>purchase</strong>: для скидочных и бонусных карт</li>
+<li><strong>spending</strong>:  для бонусных и подарочных карт</li>
+<li><strong>purchase-spending</strong>: для бонусных карт</li>
+<li><strong>status</strong>: для купонов</li>
+<li><strong>chop</strong>: для чоп карт</li>
+</ul>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Информацию о запросах и ответах каждого из вышеперечисленных запросов можете найти в детализированной <a href="https://api.loona.ai/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/"><strong>документации</strong></a> Loona API</p>
+<h1 id='api-2'>API ресурсы</h1><h2 id='e2f76dd6d7'>Получить список карт</h2><pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/passes <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+</code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://api.loona.ai/version1/passes</code></p>
+<h2 id='2e56337ac9'>Создать карту</h2><pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/passes <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "templateId": 0,
+        "placeholderValues": [
+          {
+            "name": "string",
+            "value": "string"
+          }
+        ]
+      }'</span>
+</code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://api.loona.ai/version1/passes</code></p>
+<h2 id='id'>Получить карту по id</h2><pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/passes/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
+</code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://api.loona.ai/version1/passes/{id}</code></p>
+<h1 id='681b5ae3d2'>Ошибки</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
@@ -467,9 +425,6 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
