@@ -219,20 +219,6 @@
               </ul>
           </li>
           <li>
-            <a href="#api-2" class="toc-h1 toc-link" data-title="API ресурсы">API ресурсы</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#e2f76dd6d7" class="toc-h2 toc-link" data-title="Получить список карт">Получить список карт</a>
-                  </li>
-                  <li>
-                    <a href="#2e56337ac9" class="toc-h2 toc-link" data-title="Создать карту">Создать карту</a>
-                  </li>
-                  <li>
-                    <a href="#id" class="toc-h2 toc-link" data-title="Получить карту по id">Получить карту по id</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#681b5ae3d2" class="toc-h1 toc-link" data-title="Ошибки">Ошибки</a>
           </li>
       </ul>
@@ -334,34 +320,6 @@ GET-запросы являются по умолчанию идемпотент
 </ul>
 
 <p>Информацию о запросах и ответах каждого из вышеперечисленных запросов можете найти в детализированной <a href="https://api.loona.ai/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/"><strong>документации</strong></a> Loona API</p>
-<h1 id='api-2'>API ресурсы</h1><h2 id='e2f76dd6d7'>Получить список карт</h2><pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/passes <span class="se">\</span>
-  -X GET <span class="se">\</span>
-  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-</code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.loona.ai/version1/passes</code></p>
-<h2 id='2e56337ac9'>Создать карту</h2><pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/passes <span class="se">\</span>
-  -X POST <span class="se">\</span>
-  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-  -d <span class="s1">'{
-        "templateId": 0,
-        "placeholderValues": [
-          {
-            "name": "string",
-            "value": "string"
-          }
-        ]
-      }'</span>
-</code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://api.loona.ai/version1/passes</code></p>
-<h2 id='id'>Получить карту по id</h2><pre class="highlight shell tab-shell"><code>curl https://api.loona.ai/version1/passes/<span class="o">{</span>id<span class="o">}</span> <span class="se">\</span>
-  -X GET <span class="se">\</span>
-  -H <span class="s1">'Authorization: Bearer &lt;Токен доступа&gt;'</span> <span class="se">\</span>
-  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
-
-</code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://api.loona.ai/version1/passes/{id}</code></p>
 <h1 id='681b5ae3d2'>Ошибки</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
